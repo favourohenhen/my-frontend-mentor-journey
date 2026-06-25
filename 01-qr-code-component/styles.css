@@ -16,7 +16,7 @@ body{
     font-size: 15px;
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 100vh;   /* Pro-tip: Dvh is better the vh.*/
 }
 .container {
   border: 2px var(--White) solid;
