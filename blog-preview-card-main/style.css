@@ -16,9 +16,10 @@
   --Gray-950: hsl(0, 0%, 7%);
 }
 .site-container {
-  display: grid;
-  place-items: center;
-  height: 100dvh;
+  min-height: 100dvh;       /* 1. Gives the grid a full-screen canvas */
+  display: grid;            /* 2. Turns the body into a grid container */
+  place-content: center;    /* 3. Centers the grid cell itself horizontally & vertically */
+  margin: 0;
   background-color: var(--Yellow);
   font-family: "Figtree", sans-serif;
   font-size: 15px;
@@ -102,5 +103,5 @@ p {
   font-weight: 800;
 }
 footer {
-  grid-area: 3/-3;
+ margin-top: 2em;
 }
