@@ -28,9 +28,7 @@ Users should be able to:
 ![](./assets/images/Screenshot-mobile-mode.png)
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://my-blog-preview-card.vercel.app/)
 
 ## My process
 
@@ -45,7 +43,7 @@ Users should be able to:
 
 - I learnt about a better semantic element container for images instead of div
       <figure class="head-img">
-        <img src="./assets/images/illustration-article.svg" alt=" a yellow and black illustration-article image" />
+        <img src="./assets/images/illustration-articlesvg" alt=" a yellow and black illustration-article image" />
       </figure>
 
 ### Continued development
@@ -54,4 +52,4 @@ Users should be able to:
 ## Author
 
 - Website - [DevFavour]
-- Frontend Mentor - [@yDevFavor](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@DevFavor](https://www.frontendmentor.io/profile/favourohenhen)
