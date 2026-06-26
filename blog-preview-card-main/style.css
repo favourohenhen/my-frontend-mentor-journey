@@ -30,6 +30,7 @@
   width: 100%;
   border-radius: 15px;
   border: 1px solid var(--Gray-950);
+  box-shadow: 8px 8px 0px var(--gray950);
 
   /* place-content: center; */
 }
@@ -67,12 +68,18 @@ h1 {
   font-size: 1.6em;
   font-weight: 900;
 }
-h1:hover{
+a h1:hover{
     color: var(--Yellow);
     cursor: pointer;
 }
-h1:focus{
+/* h1 a:focus-visible{
     color: var(--Yellow);
+    cursor: pointer;
+} */
+a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--Gray-950);
 }
 .card{
     font-size: 0.9em;
