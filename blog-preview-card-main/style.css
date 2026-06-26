@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Figtree'; /* The nickname you give the font */
+  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 900;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray-500: hsl(0, 0%, 42%);
+  --Gray-950: hsl(0, 0%, 7%);
+}
+.site-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--Yellow);
+ font-family: 'Figtree', sans-serif;
+ font-size: 15px;
+}
+.container {
+  background-color: var(--White);
+  max-width: 350px;
+  width: 100%;
+  border-radius: 15px;
+}
+figure {
+  margin: 0;
+}
+.head-img img {
+  max-width: 100%;
+  overflow: hidden;
+  object-position: center;
+  object-fit: contain;
+  padding: 1em;
+  border-radius: 10%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.content{
+    padding: 1em;
+}
+.span1{
+    background-color: var(--Yellow);
+    width: 100px;
+    padding: 0.5em;
+    border-radius: 5px;
+    color: black;
+    font-weight: 900;
+    font-size: 1.015em;
+}
+.main-content{
+    width: 100%;
+    max-width: 400px;
+   
+}
+h1{
+    font-size: 1.6em;
+     font-weight: 700;
+}
+p{
+    color: var(--Gray-500);
+    line-height: 1.5;
+}
+.author img{
+    max-width: 25px;
+}
+.author{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.author-name{
+    font-size: 0.8em;
+    font-weight: 800;
+}
