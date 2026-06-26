@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Figtree'; /* The nickname you give the font */
-  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-family: "Figtree"; /* The nickname you give the font */
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
   font-weight: 300 900;
   font-style: normal;
 }
@@ -18,16 +18,20 @@
 .site-container {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--Yellow);
- font-family: 'Figtree', sans-serif;
- font-size: 15px;
+  font-family: "Figtree", sans-serif;
+  font-size: 15px;
+
 }
 .container {
   background-color: var(--White);
-  max-width: 350px;
+  max-width: 349px;
   width: 100%;
   border-radius: 15px;
+  border: 1px solid var(--Gray-950);
+
+  /* place-content: center; */
 }
 figure {
   margin: 0;
@@ -43,40 +47,53 @@ figure {
   height: auto;
 }
 
-.content{
-    padding: 1em;
+.content {
+  padding: 1em;
 }
-.span1{
-    background-color: var(--Yellow);
-    width: 100px;
-    padding: 0.5em;
-    border-radius: 5px;
-    color: black;
-    font-weight: 900;
-    font-size: 1.015em;
+.span1 {
+  background-color: var(--Yellow);
+  width: 100px;
+  padding: 0.5em;
+
+  color: black;
+  font-weight: 900;
+  font-size: 0.91em;
 }
-.main-content{
-    width: 100%;
-    max-width: 400px;
-   
+.main-content {
+  width: 100%;
+  max-width: 400px;
 }
-h1{
-    font-size: 1.6em;
-     font-weight: 700;
+h1 {
+  font-size: 1.6em;
+  font-weight: 900;
 }
-p{
-    color: var(--Gray-500);
-    line-height: 1.5;
+h1:hover{
+    color: var(--Yellow);
+    cursor: pointer;
 }
-.author img{
-    max-width: 25px;
+h1:focus{
+    color: var(--Yellow);
 }
-.author{
-    display: flex;
-    align-items: center;
-    gap: 1em;
+.card{
+    font-size: 0.9em;
+    font-weight: 700;
 }
-.author-name{
-    font-size: 0.8em;
-    font-weight: 800;
+p {
+  color: var(--Gray-500);
+  line-height: 1.5;
+}
+.author img {
+  max-width: 25px;
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.author-name {
+  font-size: 0.8em;
+  font-weight: 800;
+}
+footer {
+  grid-area: 3/-3;
 }
