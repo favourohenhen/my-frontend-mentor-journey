@@ -27,6 +27,7 @@
   background-color: var(--Grey-900);
   color: var(--White);
   min-height: 100dvh;
+  width: 100%;
 }
 figure {
   margin: 0;
@@ -72,56 +73,53 @@ h1 {
   font-size: 0.9em;
   color: var(--Green);
 }
-.author-bio{
-    margin-bottom: 0;
-    color: var(--White);
-    font-size: 0.9em;
+.author-bio {
+  margin-bottom: 0;
+  color: var(--White);
+  font-size: 0.9em;
 }
 ul {
   padding: 0;
-}
-.social-links {
+  margin: 0.5em 0 2em 0;
   display: flex;
   flex-direction: column;
   gap: 0.9em;
-}
-ul li {
-  background-color: var(--Grey-700);
-  list-style: none;
-  text-align: center;
-  /* margin-bottom: 1em; */
-  padding: 1em;
-  border-radius: 10px;
-  
-}
-li a {
-  margin: 1.2em;
-  padding: 4.4em;
-  text-decoration: none;
-  color: var(--White);
-  font-weight: 700;
-}
-li:hover a {
-  color: var(--Grey-900); /* Put your desired hover color here */
-}
- ul li:hover,
- ul li:focus{
-    background-color: var(--Green);
-    cursor: pointer black;
-    color: var(--Grey-800);
-}
-a:hover,
-a:focus{
-    color: var(--Grey-800);
-    font-weight: 700;
+  width: 100%;
+  list-style: none; /* Put this here to clean up the whole list */
 }
 
-footer{
-    margin: 2em;
+/* 1. Structural placeholder only - no background, padding, or hover rules here! */
+ul li {
+  width: 100%;
 }
-footer a{
-    text-decoration: none;
+
+/* 2. The Anchor Tag does ALL the heavy lifting */
+a {
+  display: block;
+  width: 100%;
+  padding: 1em 7em; /* Vertical padding inside the button, i had to use a massive LR so it can stretch */
+  text-align: center;
+  background-color: var(--Grey-700);
+  color: var(--White);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
 }
-footer a:hover{
-    color: var(--Green);
+
+/* 3. The Grand Unification: Mouse Hover and Keyboard Focus perform identical actions */
+a:hover,
+a:focus-visible {
+  background-color: var(--Green); /* Using your custom green variable */
+  color: var(--Grey-800);
+  cursor: pointer;
+}
+
+footer {
+  margin: 2em;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--Green);
 }
