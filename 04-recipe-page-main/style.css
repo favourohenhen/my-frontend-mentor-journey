@@ -32,6 +32,7 @@
   place-content: center;
   min-height: 100dvh;
   background-color: var(--Stone-100);
+  font-family: 'Outfit', sans-serif;
 }
 figure {
   margin: 0;
@@ -45,8 +46,8 @@ figure img {
   object-position: center;
   margin: auto;
   height: auto;
-  padding: 1.5em;
-  border: 10%;
+  padding: 1.5em 1.5em 0 1.5em;
+  border-radius: 30px;
 }
 .site-main {
   background-color: var(--White);
@@ -62,4 +63,14 @@ figure img {
 }
 .site-content {
   padding: 0 1.5em 0 1.5em;
+}
+
+.site-head-text {
+   font-family: 'Young Serif', sans-serif;
+   font-weight: 200;
+   margin-bottom: 0;
+}
+.site-head-subtext{
+  font-size: 0.7em;
+  color: var(--Stone-600);
 }
