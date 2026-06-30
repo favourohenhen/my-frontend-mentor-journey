@@ -16,6 +16,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 :root {
   --White: hsl(0, 0%, 100%);
@@ -34,6 +35,7 @@
   background-color: var(--Stone-100);
   font-family: "Outfit", sans-serif;
   font-size: 0.9em;
+
 }
 img {
   vertical-align: middle;
@@ -50,7 +52,6 @@ img {
 .site-main {
   background-color: var(--White);
   border: 2px var(--Grey-800) solid;
-
   max-width: 500px;
   width: 100%;
   border-radius: 15px;
@@ -60,7 +61,7 @@ img {
   align-items: center;
 }
 .site-content {
-  padding: 0 1.5em 0 1.5em;
+  padding:1.5em;
 }
 .site-head-text,
 .ingredient-text,
@@ -71,17 +72,21 @@ img {
   margin-bottom: 0;
 }
 .site-ingredients,
-.site-instructions{
-   border-bottom: var(--Rose-50) solid;
-   padding-bottom: 0.5em;
+.site-instructions {
+  border-bottom: var(--Rose-50) solid;
+  padding-bottom: 0.5em;
+}
+h2, .prep-text{
+  padding: 0.5em 0;
 }
 .site-head-subtext {
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: var(--Stone-600);
+  padding: 1.2em 0;
 }
 .site-preparation-time {
   background-color: var(--Rose-50);
-  padding: 0.5em;
+  padding: 1em;
   border-radius: 10px;
 }
 p.prep-text {
@@ -90,12 +95,12 @@ p.prep-text {
   margin-left: 1.3em;
   margin-bottom: 0;
 }
-h2{
+h2 {
   color: var(--Brown-800);
   font-weight: 700;
 }
 .prep-list {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 li {
   margin-bottom: 0.8em;
@@ -114,17 +119,16 @@ ol li::marker {
   font-weight: 700;
 }
 ul.ingredient-list,
-ol.instruction-list
- {
+ol.instruction-list {
   list-style-position: outside;
-  font-size: 0.7em;
+  font-size: 0.8em;
   padding-left: 2.5em;
 }
 .nutrition-subtext,
-tbody{
-    font-size: 0.7em;
+tbody {
+  font-size: 0.8em;
 }
-.nutrition-p {
+.nutrition-subtext {
   margin-bottom: 1em;
 }
 
@@ -153,3 +157,18 @@ tbody{
 .nutrition-table tr:last-child td {
   border-bottom: none;
 }
+
+@media  (max-width: 620px) {
+  .site-container{
+    width: 100%;
+  }
+  .site-main {
+    font-size: 1.2em;
+  }
+  img{
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
