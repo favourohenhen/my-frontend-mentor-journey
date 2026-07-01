@@ -30,7 +30,7 @@
 
   max-width: 300px;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 100%;
 }
 img {
   min-width: 100%;
@@ -49,9 +49,49 @@ img {
   font-weight: 500;
 }
 .site-title {
-  margin: 0.4em 0;
+  margin: 0.2em 0;
   font-family: "Fraunces", sans-serif;
   font-size: 1.5em;
   line-height: 1.1;
   font-weight: 800;
+}
+.site-subtitle{
+  font-size: 0.79em;
+  margin-bottom: 1.4em;
+  color: var(--Grey);
+}
+.prices{
+  margin: 1.4em 0;
+  font-family: "Fraunces", sans-serif;
+  display: flex;
+  align-items: center;
+}
+.site-price{
+  color: var(--Green-700);
+  font-weight: 700;
+  font-size: 1.7em;
+}
+.strokethrough{
+  font-size: 0.6em;
+  padding-left: 1.2em;
+  
+}
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+  padding: 0.7em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Green-500);
+  color: white;
+}
+.carticon{
+
+  width: 10px;
+
 }
