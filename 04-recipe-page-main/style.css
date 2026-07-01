@@ -35,7 +35,7 @@
   background-color: var(--Stone-100);
   font-family: "Outfit", sans-serif;
   font-size: 0.9em;
-
+font-weight: 400;
 }
 img {
   vertical-align: middle;
