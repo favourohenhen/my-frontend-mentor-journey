@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+.site-container {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  min-height: 100dvh;
+  background-color: var(--Cream);
+  font-family: "Montserrat", sans-serif;
+}
+.site-main {
+  display: grid;
+  place-items: center;
+  text-align: left;
+
+  max-width: 300px;
+  width: 100%;
+  border-radius: 20px;
+}
+img {
+  min-width: 100%;
+  vertical-align: middle;
+  height: auto;
+  font-style: italic;
+}
+.site-text {
+  padding: 1.5em;
+  background-color: var(--White);
+}
+.site-theme {
+  color: var(--Grey);
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+.site-title {
+  margin: 0.4em 0;
+  font-family: "Fraunces", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 800;
+}
