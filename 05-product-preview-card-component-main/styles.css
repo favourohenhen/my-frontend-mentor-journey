@@ -90,7 +90,7 @@ button {
   border-radius: 5px;
   border: none;
   background-color: var(--Green-500);
-  color: white;
+  color:var(--White);
 }
 .carticon {
   width: 10px;
