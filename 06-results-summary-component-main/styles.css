@@ -1,0 +1,11 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+.card-container{
+    display: grid;
+    place-content: center;
+    min-height: 100dvh;
+    
+}
