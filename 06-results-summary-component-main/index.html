@@ -20,44 +20,77 @@
       <!-- First card: Blue -->
       <section class="card-result">
         <h1 class="card-result-text">Your Result</h1>
-        <section class="card-result-circle">
-          <p class="card-main-total">76</p>
-          <p class="card-total-result">of 100</p>
+        <section class="circle">
+          <p class="circle-score">76</p>
+          <p class="circle-total">of 100</p>
         </section>
-        <section class="card-text">
+        <section class="result-comment">
           <p class="big-text">Great</p>
-          <p class="card-text-caption">
+          <p class="comment">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </section>
       </section>
 
       <!-- Second Card: White -->
-      <section class="card-summary">
-        <h2 class="summary-head">Summary</h2>
+      <section class="summary-container">
+        <h2 class="summary">Summary</h2>
 
-        <section class="card-scores">
+        <section class="summary-card">
           
-          <div class="score">
-            <h4 class="text-img"><img src="./assets/images/icon-reaction.svg" alt="">Reaction</h4>
-            <p class="total-score"><span class="bold">80</span>/ 100</p>
-          </div>
-          <div class="score">
-            <h4 class="text-img"><img src="" alt="">Memory</h4>
-            <p class="total-score"><span class="bold">92</span>/ 100</p>
-          </div>
-          <div class="score">
-            <h4 class="text-img"><img src="" alt="">Verbal</h4>
-            <p class="total-score"><span class="bold">61</span>/ 100</p>
-          </div>
-          <div class="score">
-            <h4 class="text-img"><img src="" alt="">Visual</h4>
-            <p class="total-score"><span class="bold">72</span>/ 100</p>
-          </div>
-          
+        
+          <section class="reaction-card box">
+            <div class="icon">
+              <img src="./assets/images/icon-reaction.svg"width="1em" height="1em" class="reaction-icon" alt="img of reaction icon">
+            <p class="reaction">Reaction</p>
+            </div>
+            
+            <div class="score">
+              <p class="bold">80</p>
+              <p class="total">/ 100</p>
+            </div>
+            
+          </section>
+          <section class="memory-card box">
+            <div class="icon">
+              <img src="./assets/images/icon-memory.svg" width="1em" height="1em" class="memory-card" alt="img of memory icon">
+            <p class="memory">Memory</p>
+            </div>
+            
+            <div class="score">
+              <p class="bold">92</p>
+              <p class="total">/ 100</p>
+            </div>
+          </section>
+
+          <section class="verbal-card box">
+            <div class="icon">
+              <img src="./assets/images/icon-verbal.svg"  width="1em" height="1em" class="verbal-icon" alt="img of verbal icon">
+            <p class="verbal">Verbal</p>
+            </div>
+            
+            <div class="score">
+              <p class="bold">61</p>
+              <p class="total">/ 100</p>
+            </div>
+          </section>
+
+          <section class="visual-card box">
+            <div class="icon">
+              <img src="./assets/images/icon-visual.svg" width="1em" height="1em" class="visual-icon" alt="img of visual icon">
+            <p class="visual">Visual</p>
+            </div>
+            
+            <div class="score">
+              <p class="bold">72</p>
+              <p class="total">/ 100</p>
+            </div>
+          </section>
+         
+          <button type="button">Continue</button>
       
         </section>
-        <button type="button">Continue</button>
+        
       </section>
     </main>
   </body>
