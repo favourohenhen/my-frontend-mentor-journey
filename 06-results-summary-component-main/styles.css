@@ -29,17 +29,16 @@
   --Light-lavender: hsl(241, 100%, 89%);
   --Dark-gray-blue: hsl(224, 30%, 27%);
 }
-.card-container {
+.card_container {
   display: grid;
   place-content: center;
   min-height: 100dvh;
-background-color: var(--Pale-blue);
+  background-color: var(--Pale-blue);
   width: 100%;
-  /* font-size: 1.125em; */
   text-wrap: pretty;
   font-family: "Hanken Grotesk", sans-serif;
 }
-.card-main {
+.card_main {
   max-width: 390px;
   width: 100%;
   background-color: var(--White);
@@ -47,7 +46,7 @@ background-color: var(--Pale-blue);
   overflow: hidden;
 }
 
-.card-result {
+.card_result {
   background: linear-gradient(
     to bottom,
     hsl(252, 100%, 67%),
@@ -64,7 +63,7 @@ background-color: var(--Pale-blue);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.card-result-text {
+.card_result_text {
   font-size: 0.9em;
   color: var(--Pale-blue);
   opacity: 30%;
@@ -84,18 +83,17 @@ background-color: var(--Pale-blue);
   );
 }
 
-.circle-score {
+.circle_score {
   font-size: 55px;
   font-weight: 800;
-  /* line-height: 1.021; */
 }
-.circle-total {
+.circle_total {
   padding: 0;
   font-size: 0.65em;
   color: var(--Pale-blue);
   opacity: 40%;
 }
-.big-text {
+.big_text {
   font-size: 1.4em;
   font-weight: bold;
 }
@@ -104,7 +102,7 @@ background-color: var(--Pale-blue);
   font-size: 0.95em;
   padding: 1em 2em 0 2em;
 }
-.summary-container {
+.summary_container {
   border: 2px var(--White) solid;
   padding: 1.5em 2em;
 }
@@ -113,7 +111,7 @@ background-color: var(--Pale-blue);
   font-weight: bold;
   padding-bottom: 0.5em;
 }
-.summary-card {
+.summary_card {
   display: grid;
 
   gap: 1em;
@@ -140,29 +138,29 @@ img {
   display: flex;
   padding: 0.9em;
 }
-.bold{
-    color: hsl(224, 30%, 27%);
-    font-weight: 800;
+.bold {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
 }
-.total{
-  color:rgb(154, 153, 153);
-    font-weight: 600;
+.total {
+  color: rgb(154, 153, 153);
+  font-weight: 600;
 }
-.reaction-card {
- background-color: hsla(0, 100%, 67%, 0.068);
- color: var(--Light-red);
+.reaction_card {
+  background-color: hsla(0, 100%, 67%, 0.068);
+  color: var(--Light-red);
 }
-.memory-card {
- background-color: hsla(39, 100%, 56%,0.068);
- color: var(--Orangey-yellow);
+.memory_card {
+  background-color: hsla(39, 100%, 56%, 0.068);
+  color: var(--Orangey-yellow);
 }
-.verbal-card {
- background-color: hsla(166, 100%, 37%,0.068);
- color: var(--Green-teal);
+.verbal_card {
+  background-color: hsla(166, 100%, 37%, 0.068);
+  color: var(--Green-teal);
 }
-.visual-card {
-background-color: hsla(234, 85%, 45%,0.068);
-color: var(--Cobalt-blue);
+.visual_card {
+  background-color: hsla(234, 85%, 45%, 0.068);
+  color: var(--Cobalt-blue);
 }
 button {
   color: hsl(0, 0%, 100%);
