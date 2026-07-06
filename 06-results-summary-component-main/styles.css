@@ -109,7 +109,7 @@
 .summary {
   font-size: 0.99em;
   font-weight: bold;
-  padding-bottom: 0.5em;
+  padding-bottom: 1.5em;
 }
 .summary_card {
   display: grid;
@@ -124,13 +124,13 @@ img {
 }
 
 .box {
+  /*Sizing each of the result box container*/
   background-color: var(--Light-royal-blue);
   color: var(--White);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   font-size: 15px;
 }
 .icon,
@@ -138,6 +138,7 @@ img {
   display: flex;
   padding: 0.9em;
 }
+/* For the numbers */
 .bold {
   color: hsl(224, 30%, 27%);
   font-weight: 800;
@@ -146,6 +147,7 @@ img {
   color: rgb(154, 153, 153);
   font-weight: 600;
 }
+/*bg color and color of each result card*/
 .reaction_card {
   background-color: hsla(0, 100%, 67%, 0.068);
   color: var(--Light-red);
@@ -165,7 +167,7 @@ img {
 button {
   color: hsl(0, 0%, 100%);
   background-color: hsl(224, 30%, 27%);
-  padding: 0.9em;
+  padding: 0.8em;
   border-radius: 25px;
   font-weight: 700;
   font-size: 14px;
@@ -177,4 +179,20 @@ button:hover {
     hsl(241, 81%, 54%)
   );
   border: none;
+}
+@media (min-width: 768px) {
+  .card_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 600px;
+  }
+  .card_result,
+  .card_main {
+    border-radius: 25px;
+  }
+  .comment {
+    text-wrap: pretty;
+    padding-inline: 0;
+  }
 }
