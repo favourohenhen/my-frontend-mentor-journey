@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Outfit"; /* The nickname you give the font */
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400 600 700;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* ### Primary */
+
+  --Blue-500: hsl(215, 51%, 70%);
+  --Cyan-400: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+  /* (main BG) */
+  --Blue-950: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --Blue-900: hsl(216, 50%, 16%);
+  /* (line) */
+  --Blue-800: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+.body_container {
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  background-color: var(--Blue-950);
+  color: var(--White);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+  max-width: 350px;
+  object-fit: contain;
+  overflow: hidden;
+  object-position: center;
+  margin: auto;
+  height: auto;
+  padding: 1.2em 1.2em 0 1.2em;
+  border-radius: 30px;
+}
+.main_card {
+  background-color: var(--Blue-900);
+  border: 2px var(--Grey-800) solid;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
