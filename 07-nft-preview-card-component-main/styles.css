@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "Outfit"; /* The nickname you give the font */
-  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 400 600 700;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *,
 *::before,
 *::after {
@@ -37,7 +31,7 @@
   font-size: 0.9em;
   font-weight: 400;
 }
-img {
+.main_img {
   vertical-align: middle;
   width: 100%;
   max-width: 350px;
@@ -47,16 +41,63 @@ img {
   margin: auto;
   height: auto;
   padding: 1.2em 1.2em 0 1.2em;
-  border-radius: 30px;
+  border-radius: 22px;
 }
 .main_card {
   background-color: var(--Blue-900);
   border: 2px var(--Grey-800) solid;
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.main_information{
+  padding: 1.5em;
+ 
+}
+.main_title{
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.main_subtitle{
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.card_details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2em 0;
+  border-bottom: var(--Blue-800) solid;
+}
+.highlight{
+  color: var(--Cyan-400);
+}
+.date_time{
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+   
+}
+.avatar_bio{
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  padding-top: 1.3em;
+}
+.avatar_img{
+  max-width: 35px;
+  width: 100%;
+  border-radius: 20px;
+  border:  var(--White) solid;
+}
+.main_subtitle,
+.avatar{
+   color: var(--Blue-500);
+}
+.white{
+  color: var(--White);
 }
