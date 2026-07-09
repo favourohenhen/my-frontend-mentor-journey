@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -34,14 +34,35 @@
 .main_img {
   vertical-align: middle;
   width: 100%;
-  max-width: 350px;
+
   object-fit: contain;
   overflow: hidden;
   object-position: center;
   margin: auto;
   height: auto;
-  padding: 1.2em 1.2em 0 1.2em;
+
   border-radius: 22px;
+}
+.img {
+  position: relative;
+}
+.overlay_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  justify-content: center;
+}
+.img:hover .overlay_wrapper {
+  opacity: 1;
+  cursor: pointer;
 }
 .main_card {
   background-color: var(--Blue-900);
@@ -53,51 +74,60 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1.2em 1.2em 0 1.2em;
+  
 }
-.main_information{
-  padding: 1.5em;
- 
+.main_information {
+  padding: 1.5em 0;
 }
-.main_title{
+.title {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
-.main_subtitle{
+.subtitle {
   font-size: 1.1em;
   line-height: 1.5;
+
 }
-.card_details{
+.card_details {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.2em 0;
   border-bottom: var(--Blue-800) solid;
 }
-.highlight{
+.ETH {
+  display: flex;
+  gap: 0.5em;
+}
+.highlight {
   color: var(--Cyan-400);
 }
-.date_time{
+.date_time {
   display: flex;
   gap: 0.4em;
   align-items: center;
-   
 }
-.avatar_bio{
+.avatar_bio {
   display: flex;
   align-items: center;
   gap: 0.9em;
   padding-top: 1.3em;
 }
-.avatar_img{
+.avatar_img {
   max-width: 35px;
   width: 100%;
   border-radius: 20px;
-  border:  var(--White) solid;
+  border: var(--White) solid;
 }
-.main_subtitle,
-.avatar{
-   color: var(--Blue-500);
+.subtitle,
+.avatar {
+  color: var(--Blue-500);
 }
-.white{
+.white {
   color: var(--White);
+}
+.white:hover,
+.title:hover {
+  color: var(--Cyan-400);
 }
