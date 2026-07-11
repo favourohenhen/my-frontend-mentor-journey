@@ -45,6 +45,24 @@
   object-position: center; */
 }
 .main_content{
+  padding: 0.3em;
+}
+.order_head{
     padding: 2em;
-    width: 100%;
+    text-align: center;
+}
+h1{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.order_subtitle{
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding-top: 0.9em;
+}
+.content_plan{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
