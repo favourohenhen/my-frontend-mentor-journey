@@ -29,7 +29,7 @@
 .main_container {
   display: grid;
   place-items: center;
-  max-width: 350px;
+  max-width: 300px;
   width: 100%;
   background-color: var(--Blue-50);
   border-radius: 15px;
@@ -45,10 +45,13 @@
   object-position: center;
 }
 .main_content {
-  padding: 0.3em;
+  padding: 2em;
+  display:grid;
+  place-content: center;
+
 }
 .order_head {
-  padding: 2em;
+  padding:0  1.2em;
   text-align: center;
 }
 h1 {
@@ -56,61 +59,86 @@ h1 {
   font-weight: 800;
 }
 .order_subtitle {
-  font-size: 0.9em;
+  font-size: 0.8em;
   line-height: 1.5;
-  padding-top: 0.9em;
+  padding: 0.9em 0;
 }
 .content_plan {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1em;
-  background-color: var(--Blue-100);
- /* add sth to reduce the gray to a light gradient */
+  justify-content: space-around;
+  padding: 0.5em;
+  /* background-color: var(--Blue-100); */
+  /* add sth to reduce the gray to a light gradient */
   border-radius: 10px;
+  border: 2px red solid;
   gap: 2em;
   text-align: center;
-  margin: 0 2em 2em 2em;
 }
 .img_text {
   display: flex;
-  gap: 1em;
+  gap: 0.8em;
   align-items: center;
 }
 .plan_text {
-  font-size: 0.9em;
   line-height: 1.5;
+ font-size: 0.8em;
 }
-.annual_plan{
+.annual_plan {
   font-weight: 900;
+ 
 }
-.plan_link {
+
+.alt_plan {
   color: var(--Blue-700);
   text-decoration: underline;
   font-weight: 900;
   font-size: 0.8em;
-  padding-inline-end: 1em;
 }
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 1em;
 }
 .proceed_button {
-  padding: 0.9em;
-  width: 80%;
+  padding: 1.2em;
+  width: 100%;
   border-radius: 10px;
   background-color: var(--Blue-700);
   border: none;
   color: var(--Blue-50);
+  font-weight: 900;
   /* box-shadow: ; */
 }
 .cancel_order {
-  padding: 1.5em;
-font-weight: 900;
-font-size: 0.8em;
+  padding-top: 1.2em;
+  font-weight: 900;
+  font-size: 0.9em;
 }
+.order_subtitle,
+.year,
+.cancel {
+  color: var(--Gray-600);
+}
+.cancel:hover {
+  color: var(--Blue-950);
+  cursor: pointer;
+  font-weight: 900;
+}
+/* @media(min-width: 768px){
+  .main_container{
+      display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+  }
+
+
+
+} */
+
 /* 
 ##Task remaining
 1. Adding shadow the othe end of the annaul plan card
