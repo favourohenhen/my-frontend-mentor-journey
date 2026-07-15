@@ -17,13 +17,24 @@
   </head>
   <body class="site_body">
     <main class="main_site">
-      <section class="image">
-        <img
-        src="./images/image-header-mobile.jpg"
-        alt="image of women in an office working and chatting"
-        width="300px"
-      />
+     
       </section>
+         <picture class="image">
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/image-header-desktop.jpg"
+          width="800px"
+        />
+        <source
+          media="(max-width: 768px)"
+          srcset="./images/image-header-mobile.jpg"
+        />
+        <img
+          src="./images/image-header-mobile.jpg"
+          alt="image of women in an office working and chatting "
+          width="300px"
+        />
+      </picture>
       
       <!-- Down Card with the contents -->
       <section class="content_card">
@@ -37,16 +48,16 @@
             regarding revenue, customer experience, and overall efficiency.
           </p>
         </section>
-        <section class="assets">
-          <section class="company">
+        <section class="company_stats">
+          <section class="stats">
             <p class="figures">10k+</p>
             <p class="text">companies</p>
           </section>
-          <section class="company">
+          <section class="stats">
             <p class="figures">314</p>
             <p class="text">templates</p>
           </section>
-          <section class="company">
+          <section class="stats">
             <p class="figures">12m+</p>
             <p class="text">queries</p>
           </section>
