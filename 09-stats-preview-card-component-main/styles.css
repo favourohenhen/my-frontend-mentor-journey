@@ -36,25 +36,28 @@
   place-items: center;
   max-width: 300px;
   width: 100%;
-   background-color: var(--Blue-950);
+  background-color: var(--Blue-950);
   border-radius: 15px;
   overflow: hidden;
   color: var(--White);
 }
-/* .image{
-  
-    color: var(--Purple-500);
-    mix-blend-mode:  multiply;
-} */
+.image {
+  display: block;
+  background-color: var(--Purple-500);
+  overflow: hidden;
+}
 img {
   min-width: 100%;
   height: auto;
   object-fit: contain;
   object-position: center;
+  vertical-align: middle;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
 }
-.content_card{
-    background-color: var(--Blue-950);
- }
+.content_card {
+  background-color: var(--Blue-950);
+}
 .content_head {
   padding: 1.5em;
   font-family: "Lexend Deca", sans-serif;
@@ -97,46 +100,45 @@ img {
 
 @media (min-width: 768px) {
   .main_site {
-    /* display: grid;
-    grid-template-columns: 2fr 2fr; */
     display: flex;
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     border-radius: 0;
-    text-align: center;
+    text-align: left;
   }
   .content_card {
     order: 1;
     padding: 0 2em;
-     display: flex;
-     flex-direction: column;
-     align-items: left;
-     justify-content: space-between;
-     text-align: left;
-     gap: 2em;
-  
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
   }
-  .image,img{
-    width: 700px;
+  .image,
+  img {
+    width: 800px;
     order: 2;
     display: flex;
     height: auto;
     overflow: hidden;
   }
-  .content_head{
-   text-align: left;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   font-size: 0.9em;
-  }
-  .company_stats{
+  .content_head {
+    text-align: left;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-   text-align: left;
-     font-size: 0.8em;
-     
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9em;
+  }
+  .head_text {
+    font-size: 1.5em;
+  }
+  .head_subinfo {
+    font-size: 0.712em;
+  }
+  .company_stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
+    place-content: center;
+    text-align: left;
+    font-size: 0.8em;
   }
 }
