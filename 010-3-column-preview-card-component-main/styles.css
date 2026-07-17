@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* ### Primary */
+
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+
+  /* ### Neutral */
+  /* (paragraphs) */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --Gray-100: hsl(0, 0%, 95%);
+}
+.body_card {
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: var(--Gray-100);
+}
+.main_card {
+  display: grid;
+  place-content: center;
+  max-width: 259px;
+  /* border: 2px blue solid;
+  padding: 2em; */
+  color: var(--Transparent-white);
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.sedan_card {
+  background-color: var(--Gold-500);
+}
+.suvs_card {
+  background-color: var(--Cyan-800);
+}
+.luxury_card {
+  background-color: var(--Green-950);
+}
+.sedan_header,
+.suvs_header,
+.luxury_header {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.45em;
+  font-weight: 700;
+  color: var(--Gray-100);
+  padding-bottom: 0.9em;
+}
+.sedan_card,
+.suvs_card,
+.luxury_card {
+  padding: 2.5em;
+  gap: 0.9em;
+  display: flex;
+  flex-direction: column;
+}
+.sedan_subheader,
+.suvs_subheader,
+.luxury_subheader {
+  font-size: 0.79em;
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+  padding-bottom: 1.5em;
+}
+.learn_more {
+  padding: 0.9em;
+  border-radius: 20px;
+  border: none;
+  width: 65%;
+}
+.sedan {
+  color: var(--Gold-500);
+}
+.suvs {
+  color: var(--Cyan-800);
+}
+.luxury {
+  color: var(--Green-950);
+}
+
+@media (min-width: 768px) {
+  .main_card {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+  }
+  .sedan_card,
+  .suvs_card,
+  .luxury_card {
+    gap: 0.9em;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    display: block;
+    width: 60px;
+  }
+  /* .sedan_subheader,
+  .suvs_subheader,
+  .luxury_subheader {
+    padding-bottom: 6em;
+  } */
+  .sedan_subheader,
+  .suvs_subheader,
+  .luxury_subheader {
+    font-size: 0.8989em;
+    line-height: 1.5;
+    font-family: "Lexend Deca", sans-serif;
+    
+  }
+  .sedan_header,
+  .suvs_header,
+  .luxury_header {
+    font-family: "Big Shoulders", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.85em;
+    font-weight: 700;
+    color: var(--Gray-100);
+    gap: 9em;
+  }
+}
