@@ -71,13 +71,16 @@
   line-height: 1.5;
   font-family: "Lexend Deca", sans-serif;
   padding-bottom: 1.5em;
+  height: auto;
 }
+
 .learn_more {
   padding: 0.9em;
   border-radius: 20px;
   border: none;
   width: 65%;
 }
+
 .sedan {
   color: var(--Gold-500);
 }
@@ -105,18 +108,13 @@
     display: block;
     width: 60px;
   }
-  /* .sedan_subheader,
-  .suvs_subheader,
-  .luxury_subheader {
-    padding-bottom: 6em;
-  } */
+
   .sedan_subheader,
   .suvs_subheader,
   .luxury_subheader {
-    font-size: 0.8989em;
+    font-size: 0.98em;
     line-height: 1.5;
     font-family: "Lexend Deca", sans-serif;
-    
   }
   .sedan_header,
   .suvs_header,
@@ -126,6 +124,17 @@
     font-size: 1.85em;
     font-weight: 700;
     color: var(--Gray-100);
-    gap: 9em;
+  }
+  .sedan_content,
+  .suvs_content,
+  .luxury_content {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  .learn_more:hover{
+    color: var(--Transparent-white);
+    background-color:  transparent;
+  border: 1px var(--Transparent-white) solid;
   }
 }
