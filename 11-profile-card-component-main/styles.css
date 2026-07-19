@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* ### Primary */
+
+  --Blue-600: hsl(185, 75%, 39%);
+  --Navy-950: hsl(229, 23%, 23%);
+  --Gray-500: hsl(227, 10%, 46%);
+
+  /* ### Neutral */
+
+  --Gray-100: hsl(225, 10%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+.body_card {
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  background-position:
+    right 50vw bottom 35vh,
+    left 48vw top 52vh;
+  background-repeat: no-repeat;
+  background-image:
+    url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-color: var(--Blue-600);
+  font-family: "Kumbh Sans", sans-serif;
+}
+.main_card {
+  max-width: 300px;
+  width: 100%;
+  background-color: var(--White);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.profile_img {
+  margin-top: -50px;
+  border-radius: 50px;
+  border: 3px var(--White) solid;
+  vertical-align: middle;
+  height: auto;
+}
+.card_img {
+  /* Why did the image disapper when i used flex */
+  display: grid;
+  place-items: center;
+}
+.content_card {
+  width: 100%;
+ 
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+.content_header {
+  border-bottom: var(--Gray-100) solid;
+  padding-bottom: 0.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+   padding: 1.2em 0;
+}
+span{
+    padding-inline-start: 0.2em;
+}
+.content_head {
+  font-size: 1.125em;
+  padding-inline-end: 0.2em;
+}
+.head_place {
+  font-size: 0.9em;
+  color: var(--Gray-500);
+  padding-top: 0.3em;
+}
+
+.content_head_num {
+  color: var(--Gray-500);
+  font-weight: 700;
+}
+.content_stats {
+  display: flex;
+  
+  padding: 1.2em 0;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.figures {
+  font-size: 1.125em;
+  color: var(--Navy-950);
+  font-weight: 700;
+}
+.text {
+  font-size: 0.7em;
+  color: var(--Gray-500);
+  letter-spacing: 1.5px;
+  padding-top: 0.2em;
+}
