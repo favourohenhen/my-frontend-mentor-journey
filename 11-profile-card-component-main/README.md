@@ -1,6 +1,6 @@
 # Frontend Mentor - Profile card component solution
 
-This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the Profile card component challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -20,8 +20,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![](./images/Screenshot-desktop.png)
+![](./images/Screenshot-mobile.png)
 
 ### Links
 
@@ -39,4 +39,5 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - Mobile-first workflow
 
 ### What I learned
-- l learnt how to layer two images in the background with background-position 
+
+- l learnt how to layer two images in the background with background-position
