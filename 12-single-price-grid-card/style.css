@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* ### Primary */
+
+  --Teal-500: hsl(179, 62%, 43%);
+  --Teal-400: hsla(179, 62%, 43%, 0.807);
+  --Green-400: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+
+  --Teal-100: hsl(204, 43%, 93%);
+  --Gray-500: hsl(218, 22%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --primary-light: color-mix(in oklch, var(--Teal-500) 60%, var(--Teal-100));
+}
+.body_card {
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: var(--Teal-100);
+  font-family: "Karla", sans-serif;
+}
+.card_main {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.invite_card,
+.sub_card,
+.about_card {
+  padding: 1.5em;
+}
+.invite_card {
+  
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.invite_head {
+  color: var(--Teal-500);
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.invite_green {
+  color: var(--Green-400);
+    font-weight: 500;
+}
+.invite_info {
+  color: var(--Gray-500);
+  line-height: 1.8;
+  font-size: 0.8em;
+
+}
+.sub_card {
+  color: var(--White);
+  background-color: var(--Teal-500);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.sub_head{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.payment{
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+.annual_pay{
+    font-size: 0.35em;
+    color: var(--Teal-100);
+    opacity: 70%;
+}
+.sub_info{
+    padding-bottom: 0.8em;
+    font-size: 0.9em;
+}
+button {
+  padding: 0.8em;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--Green-400);
+  color: var(--White);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.about_card {
+  background-color: var(--Teal-400);
+  color: var(--Teal-100);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.about_info{
+    font-size: 0.7em;
+    text-align: left;
+    list-style: none;
+}
+ul li{
+    margin-bottom: 0.2em;
+}
