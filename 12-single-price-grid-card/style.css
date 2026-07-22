@@ -110,7 +110,7 @@ button {
 ul li {
   margin-bottom: 0.2em;
 }
-@media (min-width: 768px) {
+@media (min-width: 46em) {
   .card_main {
     display: grid;
     place-content: center;
