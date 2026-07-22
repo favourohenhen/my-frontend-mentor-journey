@@ -31,7 +31,7 @@
 .card_main {
   max-width: 300px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 7px;
   overflow: hidden;
 }
 .invite_card,
@@ -40,11 +40,10 @@
   padding: 1.5em;
 }
 .invite_card {
-  
   background-color: var(--White);
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1.3em;
 }
 .invite_head {
   color: var(--Teal-500);
@@ -53,13 +52,12 @@
 }
 .invite_green {
   color: var(--Green-400);
-    font-weight: 500;
+  font-weight: 500;
 }
 .invite_info {
   color: var(--Gray-500);
   line-height: 1.8;
   font-size: 0.8em;
-
 }
 .sub_card {
   color: var(--White);
@@ -68,24 +66,24 @@
   flex-direction: column;
   gap: 0.7em;
 }
-.sub_head{
-    font-size: 1.1em;
-    font-weight: 600;
+.sub_head {
+  font-size: 1.1em;
+  font-weight: 600;
 }
-.payment{
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-    gap: 0.2em;
+.payment {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
 }
-.annual_pay{
-    font-size: 0.35em;
-    color: var(--Teal-100);
-    opacity: 70%;
+.annual_pay {
+  font-size: 0.35em;
+  color: var(--Teal-100);
+  opacity: 70%;
 }
-.sub_info{
-    padding-bottom: 0.8em;
-    font-size: 0.9em;
+.sub_info {
+  padding-bottom: 0.8em;
+  font-size: 0.9em;
 }
 button {
   padding: 0.8em;
@@ -104,11 +102,58 @@ button {
   flex-direction: column;
   gap: 1.2em;
 }
-.about_info{
-    font-size: 0.7em;
-    text-align: left;
-    list-style: none;
+.about_info {
+  font-size: 0.7em;
+  text-align: left;
+  list-style: none;
 }
-ul li{
-    margin-bottom: 0.2em;
+ul li {
+  margin-bottom: 0.2em;
+}
+@media (min-width: 768px) {
+  .card_main {
+    display: grid;
+    place-content: center;
+    min-width: 600px;
+  }
+  .invite_card,
+  .sub_card,
+  .about_card {
+    padding: 2.5em;
+  }
+  .invite_card {
+    grid-column: 1/3;
+    gap: 0.5em;
+  }
+  .invite_head {
+    padding-bottom: 0.8em;
+  }
+  .invite_info {
+    text-wrap: balance;
+    font-size: 0.9em;
+  }
+  .subscription_card {
+    display: grid;
+    min-width: 600px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sub_card {
+    grid-column: 1/2;
+  }
+  .about_card {
+    grid-column: 2/3;
+  }
+  .about_info {
+    font-size: 0.8em;
+    font-weight: 200;
+  }
+  button {
+    width: 100%;
+    padding: 1.1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  button:hover {
+    transform: scale(90%);
+  }
 }
