@@ -26,10 +26,10 @@
   display: grid;
   place-content: center;
   min-height: 100dvh;
-  /* font-size: 0.9375em; */
+  
   background-color: var(--Navy-950);
   width: 100%;
-  /* text-wrap: balance; */
+
 }
 .main_site {
   display: grid;
