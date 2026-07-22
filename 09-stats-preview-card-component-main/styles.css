@@ -26,10 +26,9 @@
   display: grid;
   place-content: center;
   min-height: 100dvh;
-  
+
   background-color: var(--Navy-950);
   width: 100%;
-
 }
 .main_site {
   display: grid;
