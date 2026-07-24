@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* ### Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 94%, 48%);
+
+  /* ### Neutral */
+
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+.body_card {
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+.main_card {
+  max-width: 420px;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+.project_card {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+}
+.header_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+ text-align: center;
+ 
+}
+.head_text {
+  font-size: 1.49em;
+  color: var(--Grey-400);
+  font-weight: 400;
+}
+.head_sub {
+  font-size: 1.51em;
+  color: var(--Grey-500);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.head_info {
+  text-align: center;
+  font-size: 0.97em;
+  padding-top: 0.8em;
+  text-wrap: balance;
+  color: var(--Grey-400);
+}
+.supervisor_card {
+  border-top: 4px var(--Cyan) solid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.team_card {
+  border-top: 4px var(--Red) solid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.karma_card {
+  border-top: 4px var(--Orange) solid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.calculator_card {
+  border-top: 4px var(--Blue) solid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.shadow {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 1.9em;
+  width: 100%;
+}
+.supervisor_info,
+.team_info,
+.karma_info,
+.calculator_info{
+  font-size: 0.89em;
+  text-wrap: wrap;
+}
+img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+}
+.icon {
+  align-self: flex-end;
+  justify-self: center;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+}
