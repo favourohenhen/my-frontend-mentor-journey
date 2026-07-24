@@ -47,8 +47,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
- text-align: center;
- 
+  text-align: center;
 }
 .head_text {
   font-size: 1.49em;
@@ -95,7 +94,7 @@
 .supervisor_info,
 .team_info,
 .karma_info,
-.calculator_info{
+.calculator_info {
   font-size: 0.89em;
   text-wrap: wrap;
 }
@@ -109,4 +108,51 @@ img {
   justify-self: center;
   padding-top: 0.9em;
   padding-bottom: 0.9em;
+}
+/* Desktop mode */
+@media (min-width: 48em) {
+  .main_card {
+    display: flex;
+  }
+  .header_card{
+    width: 50vw;
+  }
+ 
+  .project_card {
+    display: grid;
+
+    max-width: 400px;
+    /* min-height: 150dvh; */
+    width: 100%;
+    place-content: center;
+    gap: 2.3em;
+  }
+  .supervisor_card {
+    grid-row: 3;
+    grid-area: 2;
+
+  }
+  .supervisor_card,
+  .calculator_card {
+    align-content: center;
+  }
+  .calculator_card {
+    grid-column: 3;
+    grid-row: 2;
+    order: 4;
+  }
+  .team_card {
+    grid-row: 2;
+    grid-column: 2;
+
+  }
+  .karma_card {
+    grid-column: 2;
+    grid-row: 3;
+  
+  }
+  .shadow {
+    width: 100%;
+    min-width: 350px;
+  }
 }
