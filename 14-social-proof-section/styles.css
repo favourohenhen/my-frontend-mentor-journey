@@ -30,8 +30,9 @@
   max-width: 400px;
   display: grid;
   place-items: center;
-  gap: 1em;
-  padding: 2em;
+  gap: 2em;
+  padding: 2.5em 0;
+  /* background-color: violet; */
 }
 .header_card{
   display: flex;
@@ -53,8 +54,28 @@
   color: var(--Dark-Grayish-Magenta);
   line-height: 1.5;
 }
+.rating_card{
+  display: flex;
+  flex-direction: column;
+  gap: 1.9em;
+ 
+  width: 100%;
+}
+.rate{
+  gap: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Light-Grayish-Magenta);
+   color: var(--Very-Dark-Magenta);
+   font-weight: 700;
+  padding: 1em;
+  border-radius: 12px;
+ 
+}
 .stars_icon {
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
   width: 100px; /* 5 stars * 20px = 100px total width */
   height: 16px; /* Height of 1 star image */
 
@@ -71,12 +92,13 @@
 .review{
   background-color: var(--Very-Dark-Magenta);
   color: var(--White);
-  padding: 2em;
+  padding: 2.5em;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 2em;
 
+  gap: 2em;
+width: 100%;
 }
 .red{
   color: var(--Soft-Pink);
@@ -84,11 +106,19 @@
 .avatar{
   display: flex;
   gap: 2em;
-
+align-items: center;
 }
 img{
   vertical-align: middle;
   border-radius:50px;
   height: auto;
 
+}
+.avatar_name,
+.red{
+  font-size: 1.2em;
+}
+.comment{
+  color: var(--White);
+  font-size: 1.3em;
 }
