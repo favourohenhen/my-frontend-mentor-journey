@@ -21,58 +21,65 @@
 }
 .body_card {
   display: grid;
-  place-content: center;
+  place-items: center;
   min-height: 100dvh;
   width: 100%;
+  padding: 2.5em;
   font-family: "League Spartan", sans-serif;
   background-position:
-    left top,
-    right bottom;
+    top left,
+    bottom right;
   background-repeat: no-repeat, no-repeat;
-  /* background-image:
+  padding: 5rem 1.5rem;
+  background-image:
     url(./images/bg-pattern-top-mobile.svg),
-    url(./images/bg-pattern-bottom-mobile.svg); */
+    url(./images/bg-pattern-bottom-mobile.svg);
 }
+
 .main_card {
-  max-width: 400px;
-  display: grid;
-  place-items: center;
-  gap: 2em;
-  padding: 2.5em 0;
+  width: 100%;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   /* background-color: violet; */
 }
 .header_main {
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
+  align-items: center;
+  gap: 2.5rem;
   text-align: center;
 }
 .header_card {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  gap: 1rem;
+  /* text-align: center; */
   align-items: center;
-  gap: 1em;
-  width: 95%;
 }
 .head_text {
-  font-size: 2em;
+  font-size: 2.9em;
   padding-inline: 1.5em;
   color: var(--Very-Dark-Magenta);
-  font-weight: 750;
-  line-height: 0.9;
-  text-wrap: pretty;
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -1px;
 }
+
 .head_subtext {
   color: var(--Dark-Grayish-Magenta);
-  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 .rating_card {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  width: 100%;
+  gap: 1rem;
 }
+
 .rating {
   gap: 0.9em;
   display: flex;
@@ -81,8 +88,13 @@
   background-color: var(--Light-Grayish-Magenta);
   color: var(--Very-Dark-Magenta);
   font-weight: 700;
-  padding: 1em;
+  padding: 1.5em;
+
   border-radius: 12px;
+}
+.text {
+  font-size: 1.3em;
+  font-weight: 700;
 }
 .stars_icon {
   display: inline-block;
@@ -95,18 +107,24 @@
 }
 .testimonial_card {
   display: grid;
-  gap: 1em;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
 }
+
 .card_1,
 .card_2,
 .card_3 {
   background-color: var(--Very-Dark-Magenta);
   color: var(--White);
-  padding: 2.6em;
+
   border-radius: 12px;
+
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1.5rem;
+  gap: 2.5em;
   width: 100%;
 }
 .red {
@@ -130,45 +148,47 @@ img {
 .red {
   font-size: 1.2em;
 }
-.comment {
-  color: var(--White);
+.comment_text {
   font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.6;
+
 }
-@media (min-width: 48em) {
+
+/* DESKTOP MODE */
+
+@media (min-width: 60em) {
   .body_card {
-    display: block;
-    background-position:
-      left top,
-      right bottom;
-    background-repeat: no-repeat, no-repeat;
+
     background-image:
       url(./images/bg-pattern-top-desktop.svg),
       url(./images/bg-pattern-bottom-desktop.svg);
-    width: 100%;
-    margin: 0 auto;
   }
   .main_card {
-    width: 90%; /* Keeps padding on medium screens */
-    max-width: 1199px; /* Prevents layout from stretching infinitely on wide monitors */
-    margin: 0 auto;
-  }
-  .header_main {
-    display: flex;
-    flex-direction: row;
-    gap: 6rem;
-    align-items: center;
-    margin-bottom: 4rem;
-    width: 100%;
-  }
-  .header_card {
+       width: 100%;
+    max-width: 1110px;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    gap: 3rem;
   }
-  .head_text {
-    padding: 0;
-    font-size: 3.9em;
+  .header_main {
+   flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 6rem;
   }
+  .header_card {
+   width: 45%;
+        flex-shrink: 0;
+        display: flex;
+  align-items: flex-start;
+  }
+  
+.head_text{
+  font-size: 3.9em;
+  padding: 0;
+  
+}
 
   .rating {
     display: flex;
@@ -201,17 +221,15 @@ img {
     transform: translateX(80px); /* Pushes 3rd bar further right */
   }
   .testimonial_card {
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    gap: 7rem;
-    align-items: start;
-    width: 100%; /* Fills the container column */
-    min-width: 400px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        align-items: start;
+    }
   }
   .card_1,
   .card_2,
   .card_3 {
-    width: 120%;
+    padding: 2.5rem 2.5rem;
   }
   .card_1:nth-child(1) {
     transform: translateY(0);
@@ -224,4 +242,4 @@ img {
   .card_3:nth-child(3) {
     transform: translateY(32px); /* Drops Anne's card further down */
   }
-}
+
