@@ -38,11 +38,10 @@
 
 .main_card {
   width: 100%;
-  max-width: 1110px;
+  max-width: 1110px; /*This made building the desktop flexible*/
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  /* background-color: violet; */
 }
 .header_main {
   display: flex;
@@ -55,7 +54,6 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* text-align: center; */
   align-items: center;
 }
 .head_text {
@@ -89,7 +87,6 @@
   color: var(--Very-Dark-Magenta);
   font-weight: 700;
   padding: 1.5em;
-
   border-radius: 12px;
 }
 .text {
@@ -117,14 +114,11 @@
 .card_3 {
   background-color: var(--Very-Dark-Magenta);
   color: var(--White);
-
   border-radius: 12px;
-
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  gap: 2.5em;
   width: 100%;
 }
 .red {
@@ -150,45 +144,42 @@ img {
 }
 .comment_text {
   font-size: 1.3em;
-    font-weight: 400;
-    line-height: 1.6;
-
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* DESKTOP MODE */
 
 @media (min-width: 60em) {
   .body_card {
-
     background-image:
       url(./images/bg-pattern-top-desktop.svg),
       url(./images/bg-pattern-bottom-desktop.svg);
   }
   .main_card {
-       width: 100%;
+    width: 100%;
     max-width: 1110px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
   }
   .header_main {
-   flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-        gap: 6rem;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 6rem;
   }
   .header_card {
-   width: 45%;
-        flex-shrink: 0;
-        display: flex;
-  align-items: flex-start;
+    width: 45%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
   }
-  
-.head_text{
-  font-size: 3.9em;
-  padding: 0;
-  
-}
+
+  .head_text {
+    font-size: 3.9em;
+    padding: 0;
+  }
 
   .rating {
     display: flex;
@@ -221,28 +212,27 @@ img {
     transform: translateX(80px); /* Pushes 3rd bar further right */
   }
   .testimonial_card {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        align-items: start;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
   }
-  .comment_text{
-    font-size: 1.05rem;
-  }
-  .card_1,
-  .card_2,
-  .card_3 {
-    padding: 2.5rem 2.5rem;
-  }
-  .card_1:nth-child(1) {
-    transform: translateY(0);
-  }
+}
+.comment_text {
+  font-size: 1.05rem;
+}
+.card_1,
+.card_2,
+.card_3 {
+  padding: 2.5rem 2.5rem;
+}
+.card_1:nth-child(1) {
+  transform: translateY(0);
+}
 
-  .card_2:nth-child(2) {
-    transform: translateY(16px); /* Drops Irene's card down */
-  }
+.card_2:nth-child(2) {
+  transform: translateY(16px); /* Drops Irene's card down */
+}
 
-  .card_3:nth-child(3) {
-    transform: translateY(32px); /* Drops Anne's card further down */
-  }
-
+.card_3:nth-child(3) {
+  transform: translateY(32px); /* Drops Anne's card further down */
+}
