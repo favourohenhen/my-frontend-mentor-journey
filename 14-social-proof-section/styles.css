@@ -30,7 +30,7 @@
     top left,
     bottom right;
   background-repeat: no-repeat, no-repeat;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   background-image:
     url(./images/bg-pattern-top-mobile.svg),
     url(./images/bg-pattern-bottom-mobile.svg);
