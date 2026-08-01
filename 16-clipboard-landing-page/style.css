@@ -27,7 +27,7 @@ button {
   width: 100%;
 }
 .main_wrapper {
-  max-width: 1110px;
+  /* max-width: 1110px; */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -159,6 +159,9 @@ img {
   gap: 1em;
   flex-direction: column;
 
+  color: var(--Gray-700);
+}
+.card_text{
   color: var(--Gray-700);
 }
 .info_access_text {
@@ -298,4 +301,62 @@ img {
 }
 .socials i {
   padding: 0.6em;
+}
+
+
+@media(min-width: 60em){
+  .body_wrapper{
+    background-image: url(./images/bg-header-desktop.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .header_card{
+    background-image: none;
+  }
+  .logo{
+    width: 9%;
+  }
+  .header_infocard{
+    padding-inline: 0.9em;
+    width: 50%;
+  }
+  .info_subtext{
+    padding-inline: 2em;
+  
+  }
+  .btn_group{
+    flex-direction: row;
+     align-items: center;
+  justify-content: center;
+  }
+  .btn_1,
+  .btn_2{
+    width: 25%;
+  }
+  .about_card{
+    padding: 0;
+  }
+  .about_infocard{
+    width: 60%;
+  }
+  .feature_info{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+    
+  }
+.computer{
+    width: 90%;
+  
+  }
+ .feature_info_card{
+  text-align: left;
+  padding-right: 6em;
+ 
+ }
+ .info_access_subtext{
+ 
+  padding-inline: 1.8em;
+ }
 }
