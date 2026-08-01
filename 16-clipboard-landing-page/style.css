@@ -6,8 +6,9 @@
   margin: 0;
   padding: 0;
 }
-.button {
+button {
   font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 800;
 }
 :root {
   --Green-500: hsl(171, 66%, 44%);
@@ -75,7 +76,6 @@ img {
   gap: 1.2em;
   margin-bottom: 2em;
   width: 80%;
-  
 }
 .btn_1,
 .btn_2 {
@@ -103,7 +103,7 @@ img {
   gap: 3em;
   padding: 1.5em;
 }
-.about_infocard{
+.about_infocard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,22 +111,22 @@ img {
   gap: 1em;
   text-align: center;
 }
-.info_about_text{
+.info_about_text {
   font-size: 1.5em;
   color: var(--Gray-700);
 }
-.info_about_subtext{
+.info_about_subtext {
   color: var(--Gray-500);
   font-size: 1em;
   line-height: 1.5;
 }
-.feature_info{
+.feature_info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5em;
 }
-.feature_info_card{
+.feature_info_card {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -136,54 +136,51 @@ img {
 }
 .search_card,
 .iCloud_card,
-.history_card{
+.history_card {
   display: grid;
   gap: 0.5em;
-  
 }
-.card_subtext{
+.card_subtext {
   color: var(--Gray-500);
   font-size: 0.9em;
 }
 
 /* ACCESS CARD STYLES */
-.access_card{
+.access_card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5em;
   padding: 1.5em;
-
 }
-.access_info{
+.access_info {
   text-align: center;
   display: flex;
   gap: 1em;
   flex-direction: column;
- 
+
   color: var(--Gray-700);
 }
-.info_access_text{
- text-transform: capitalize;
+.info_access_text {
+  text-transform: capitalize;
 }
-.info_access_subtext{
+.info_access_subtext {
   font-size: 0.89em;
   color: var(--Gray-500);
   line-height: 1.5;
-   padding-inline: 0.9em;
+  padding-inline: 0.9em;
 }
 
 /* TOOL CARD STYLES */
-.tool_card{
+.tool_card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5em;
   text-align: center;
   gap: 4em;
-
 }
-.tool_info{
+.tool_info {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -191,77 +188,77 @@ img {
 .info_tool_text,
 .blacklist_text,
 .icon_text,
-.preview_text{
+.preview_text {
   color: var(--Gray-700);
 }
-.info_tool_subtext{
+.info_tool_subtext {
   line-height: 1.5;
   color: var(--Gray-500);
 }
-.tool_list_items{
+.tool_list_items {
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
-.list_item{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 2em;
+.list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }
 .item1_info,
 .item2_info,
-.item3_info{
+.item3_info {
   display: grid;
   gap: 1em;
 }
 .blacklist_subtext,
 .icontext_subtext,
-.preview_subtext{
+.preview_subtext {
   color: var(--Gray-500);
   font-size: 0.9em;
   line-height: 1.5;
 }
-.blacklist_subtext{
-   padding-inline: 0.9em;
+.blacklist_subtext {
+  padding-inline: 0.9em;
 }
 
 /* SPONSORS STYLES */
-.sponsors_card{
+.sponsors_card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3em;
-   padding: 1.5em;
+  padding: 1.5em;
 }
 
 /* DOWNLOAD STYLES */
-.download_card{
+.download_card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5em;
   gap: 3em;
 }
-.download_info{
+.download_info {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 1em;
 }
-.info_download_text{
+.info_download_text {
   color: var(--Gray-700);
   font-size: 1.6em;
 }
-.info_download_subtext{
+.info_download_subtext {
   color: var(--Gray-500);
   line-height: 1.4;
   font-size: 0.98em;
 }
 
 /* FOOTER STYLES */
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,22 +268,22 @@ gap: 2em;
   padding-top: 2em;
   background-color: var(--Gray-300);
 }
-.logo2{
+.logo2 {
   width: 40%;
 }
-.left_card{
+.left_card {
   display: flex;
   flex-direction: column;
   gap: 1em;
   align-items: center;
   text-align: center;
 }
-.icon{
+.icon {
   padding: 1.5em;
 }
 .contact_FAQ,
 .privacy_kit,
-.install{
+.install {
   display: grid;
   gap: 1em;
 }
