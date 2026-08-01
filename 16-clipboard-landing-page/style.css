@@ -13,7 +13,8 @@
   --Green-500: hsl(171, 66%, 44%);
   --Blue-100: hsl(233, 100%, 69%);
   --Gray-700: hsl(210, 10%, 33%);
-  --Gray-500: hsl(201, 11%, 66%);
+  --Gray-500: hsl(201, 18%, 78%);
+  --Gray-300: hsla(206, 38%, 88%, 0.211);
   --White: hsl(0, 0%, 100%);
 }
 .body_wrapper {
@@ -21,7 +22,7 @@
   place-items: center;
   min-height: 100dvh;
   font-family: "Bai Jamjuree", sans-serif;
-  /* padding: 2em 0; */
+  /* padding-bottom: 2em; */
   width: 100%;
 }
 .main_wrapper {
@@ -39,7 +40,7 @@
   background-image: url(./images/bg-header-mobile.png);
   background-repeat: no-repeat;
   background-position: top center;
-  padding-top: 3em;
+  padding-top: 6em;
   gap: 2em;
   width: 100%;
   background-size: cover;
@@ -49,21 +50,21 @@ img {
   height: auto;
 }
 .logo {
-  width: 25%;
+  width: 30%;
 }
 .header_infocard {
   text-align: center;
-  /* padding-inline: 2em; */
+  padding-inline: 0.5em;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 .info_headtext {
-  font-size: 1.9em;
+  font-size: 1.7em;
   color: var(--Gray-700);
 }
 .info_subtext {
-  font-size: 0.98em;
+  font-size: 0.88em;
   line-height: 1.5;
   padding-inline: 0.9em;
   color: var(--Gray-500);
@@ -71,9 +72,10 @@ img {
 .btn_group {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1.2em;
   margin-bottom: 2em;
   width: 80%;
+  
 }
 .btn_1,
 .btn_2 {
@@ -83,10 +85,220 @@ img {
   color: var(--White);
   font-weight: 500;
   font-size: 0.9em;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 .btn_1 {
   background-color: var(--Green-500);
 }
 .btn_2 {
   background-color: var(--Blue-100);
+}
+
+/* ABOUT SECTION STYLES */
+.about_card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+  padding: 1.5em;
+}
+.about_infocard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  text-align: center;
+}
+.info_about_text{
+  font-size: 1.5em;
+  color: var(--Gray-700);
+}
+.info_about_subtext{
+  color: var(--Gray-500);
+  font-size: 1em;
+  line-height: 1.5;
+}
+.feature_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+}
+.feature_info_card{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  /* align-items: center;
+  justify-content: center; */
+  text-align: center;
+}
+.search_card,
+.iCloud_card,
+.history_card{
+  display: grid;
+  gap: 0.5em;
+  
+}
+.card_subtext{
+  color: var(--Gray-500);
+  font-size: 0.9em;
+}
+
+/* ACCESS CARD STYLES */
+.access_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+  padding: 1.5em;
+
+}
+.access_info{
+  text-align: center;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+ 
+  color: var(--Gray-700);
+}
+.info_access_text{
+ text-transform: capitalize;
+}
+.info_access_subtext{
+  font-size: 0.89em;
+  color: var(--Gray-500);
+  line-height: 1.5;
+   padding-inline: 0.9em;
+}
+
+/* TOOL CARD STYLES */
+.tool_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  text-align: center;
+  gap: 4em;
+
+}
+.tool_info{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.info_tool_text,
+.blacklist_text,
+.icon_text,
+.preview_text{
+  color: var(--Gray-700);
+}
+.info_tool_subtext{
+  line-height: 1.5;
+  color: var(--Gray-500);
+}
+.tool_list_items{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.list_item{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2em;
+}
+.item1_info,
+.item2_info,
+.item3_info{
+  display: grid;
+  gap: 1em;
+}
+.blacklist_subtext,
+.icontext_subtext,
+.preview_subtext{
+  color: var(--Gray-500);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+.blacklist_subtext{
+   padding-inline: 0.9em;
+}
+
+/* SPONSORS STYLES */
+.sponsors_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+   padding: 1.5em;
+}
+
+/* DOWNLOAD STYLES */
+.download_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  gap: 3em;
+}
+.download_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+.info_download_text{
+  color: var(--Gray-700);
+  font-size: 1.6em;
+}
+.info_download_subtext{
+  color: var(--Gray-500);
+  line-height: 1.4;
+  font-size: 0.98em;
+}
+
+/* FOOTER STYLES */
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+  justify-content: center;
+  padding-top: 2em;
+  background-color: var(--Gray-300);
+}
+.logo2{
+  width: 40%;
+}
+.left_card{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}
+.icon{
+  padding: 1.5em;
+}
+.contact_FAQ,
+.privacy_kit,
+.install{
+  display: grid;
+  gap: 1em;
+}
+.socials {
+  display: flex;
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+  gap: 1.8em;
+  font-size: 1.5em; /* width of the icons*/
+  width: 80px;
+  padding-bottom: 1.8em;
+}
+.socials i {
+  padding: 0.6em;
 }
