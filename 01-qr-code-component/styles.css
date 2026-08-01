@@ -13,10 +13,10 @@
 body{
     background-color: var(--Slate-300);
     font-family: "Outfit", sans-serif;
-    font-size: 15px;
+    font-size: 0.9em;
     display: grid;
-    place-items: center;
-    height: 100vh;   /* Pro-tip: Dvh is better the vh.*/
+    place-content: center;
+    height: 100dvh;   /* Pro-tip: Dvh is better the vh.*/
 }
 .container {
   border: 2px var(--White) solid;
