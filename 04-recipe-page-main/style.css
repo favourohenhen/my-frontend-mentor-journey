@@ -44,10 +44,7 @@ img {
   object-fit: contain;
   overflow: hidden;
   object-position: center;
-  margin: auto;
   height: auto;
-  padding: 1.5em 1.5em 0 1.5em;
-  border-radius: 30px;
 }
 .site-main {
   background-color: var(--White);
@@ -158,7 +155,7 @@ tbody {
   border-bottom: none;
 }
 
-@media  (max-width: 620px) {
+@media  (min-width: 60em) {
   .site-container{
     width: 100%;
   }
@@ -167,8 +164,8 @@ tbody {
   }
   img{
     width: 100%;
-    padding: 0;
-    border-radius: 0;
+    padding: 1.5em 1.5em 0 1.5em;
+  border-radius: 30px;
   }
 }
 
