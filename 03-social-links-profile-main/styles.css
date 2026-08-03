@@ -38,9 +38,11 @@ img{
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  max-width: 1100px;
+
   width: 100%;
-  padding: 1.5em 1.5em 0 1.5em;
+padding-left: 1.5em;
+padding-right: 1.5em;
+padding-top: 3em;
   border: 2px var(--Grey-800) solid;
   background-color: var(--Grey-800);
   border-radius: 15px;
@@ -60,14 +62,14 @@ img{
   font-size: 0.9em;
 }
 .author-bio {
-  font-size: 0.89em;
+  font-size: 0.73em;
   padding-top: 0.9em;
 }
 ul {
   padding: 0;
-  margin: 0.5em 0 2em 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.9em;
   width: 100%;
   list-style: none; 
@@ -77,18 +79,26 @@ ul {
 ul li {
   width: 100%;
 }
-
+li a{
+    font-size: 0.82rem;
+}
+.project{
+ white-space: nowrap;
+}
 /* 2. The Anchor Tag does ALL the heavy lifting */
 a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 1em 5em; 
+  padding: 1em 6em; 
   text-align: center;
   background-color: var(--Grey-700);
   color: var(--White);
   text-decoration: none;
   font-weight: 700;
   border-radius: 10px;
+
  
 }
 
@@ -100,5 +110,11 @@ a:focus-visible {
   cursor: pointer;
 }
 @media(min-width:60em){
-
+.container{
+  max-width: 800px;
+  padding: 2em;
+}
+li a{
+  font-size: 0.9em;
+}
 }
