@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 *,
 *::before,
@@ -14,7 +14,7 @@
   --Grey-800: hsl(0, 0%, 12%);
   --Grey-900: hsl(0, 0%, 8%);
 }
-.site_container{
+.site_container {
   display: grid;
   place-content: center;
   width: 100%;
@@ -24,37 +24,36 @@
   color: var(--White);
   padding: 2em;
 }
-img{
+img {
   /* vertical-align: middle; */
   max-width: 100%;
   border-radius: 50%;
   overflow: hidden;
   object-position: center;
   height: auto;
- 
 }
-.container{
+.container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 
   width: 100%;
-padding-left: 1.5em;
-padding-right: 1.5em;
-padding-top: 3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 3em;
   border: 2px var(--Grey-800) solid;
   background-color: var(--Grey-800);
   border-radius: 15px;
   gap: 2em;
 }
-.author-information{
+.author-information {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5em;
 }
-.author-name{
+.author-name {
   font-size: 1.4em;
 }
 .author-location {
@@ -72,18 +71,18 @@ ul {
   align-items: center;
   gap: 0.9em;
   width: 100%;
-  list-style: none; 
-} 
+  list-style: none;
+}
 
 /* 1. Structural placeholder only - no background, padding, or hover rules here! */
 ul li {
   width: 100%;
 }
-li a{
-    font-size: 0.82rem;
+li a {
+  font-size: 0.82rem;
 }
-.project{
- white-space: nowrap;
+.project {
+  white-space: nowrap;
 }
 /* 2. The Anchor Tag does ALL the heavy lifting */
 a {
@@ -91,30 +90,27 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1em 6em; 
+  padding: 1em 5em;
   text-align: center;
   background-color: var(--Grey-700);
   color: var(--White);
   text-decoration: none;
   font-weight: 700;
   border-radius: 10px;
-
- 
 }
 
 /* 3. The Grand Unification: Mouse Hover and Keyboard Focus perform identical actions */
-a:hover,
-a:focus-visible {
-  background-color: var(--Green); 
+a:hover {
+  background-color: var(--Green);
   color: var(--Grey-800);
   cursor: pointer;
 }
-@media(min-width:60em){
-.container{
-  max-width: 800px;
-  padding: 2em;
-}
-li a{
-  font-size: 0.9em;
-}
+@media (min-width: 60em) {
+  .container {
+    max-width: 800px;
+    padding: 2em;
+  }
+  li a {
+    font-size: 0.9em;
+  }
 }

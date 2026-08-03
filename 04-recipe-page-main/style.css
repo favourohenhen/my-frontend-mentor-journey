@@ -35,7 +35,7 @@
   background-color: var(--Stone-100);
   font-family: "Outfit", sans-serif;
   font-size: 0.9em;
-font-weight: 400;
+  font-weight: 400;
 }
 img {
   vertical-align: middle;
@@ -58,7 +58,7 @@ img {
   align-items: center;
 }
 .site-content {
-  padding:1.5em;
+  padding: 1.5em;
 }
 .site-head-text,
 .ingredient-text,
@@ -73,7 +73,8 @@ img {
   border-bottom: var(--Rose-50) solid;
   padding-bottom: 0.5em;
 }
-h2, .prep-text{
+h2,
+.prep-text {
   padding: 0.5em 0;
 }
 .site-head-subtext {
@@ -138,7 +139,6 @@ tbody {
 
 .nutrition-table td {
   border-bottom: var(--Rose-50) solid;
-
   padding: 0.75em 0;
   font-weight: 700;
   color: var(--Rose-800);
@@ -155,17 +155,16 @@ tbody {
   border-bottom: none;
 }
 
-@media  (min-width: 60em) {
-  .site-container{
+@media (min-width: 60em) {
+  .site-container {
     width: 100%;
   }
   .site-main {
     font-size: 1.2em;
   }
-  img{
+  img {
     width: 100%;
     padding: 1.5em 1.5em 0 1.5em;
-  border-radius: 30px;
+    border-radius: 30px;
   }
 }
-
