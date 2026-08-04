@@ -21,7 +21,7 @@
   --Gray-600: hsl(224, 23%, 55%);
   --Blue-950: hsl(223, 47%, 23%);
 }
-.main_body {
+.main-body {
   display: grid;
   place-content: center;
   min-height: 100dvh;
@@ -29,7 +29,7 @@
   width: 100%;
   font-family: "Red Hat Display", sans-serif;
 }
-.main_container {
+.main-container {
   display: grid;
   place-items: center;
   max-width: 300px;
@@ -38,7 +38,7 @@
   border-radius: 15px;
   overflow: hidden;
 }
-.main_img {
+.main-img {
   height: auto;
   vertical-align: middle;
   max-width: 100%;
@@ -47,13 +47,13 @@
   overflow: hidden;
   object-position: center;
 }
-.main_content {
+.main-content {
   padding: 2em;
   display:grid;
   place-content: center;
 
 }
-.order_head {
+.order-head {
   padding-bottom: 1.3em;
   text-align: center;
 }
@@ -61,13 +61,13 @@ h1 {
   font-size: 1.5em;
   font-weight: 800;
 }
-.order_subtitle {
+.order-subtitle {
   font-size: 0.9em;
 padding-top: 1.2em;
   line-height: 1.5;
   
 }
-.content_plan {
+.content-plan {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -80,24 +80,21 @@ padding-top: 1.2em;
   text-align: center;
 
 }
-.img_text {
+.img-text {
   display: flex;
   gap: 0.8em;
   align-items: center;
 }
-.plan_text {
+.plan-text {
   line-height: 1.5;
  font-size: 0.8em;
 }
-.annual_plan {
+.annual-plan {
   font-weight: 900;
  
 }
-/* .icon-music{
-  background-color: var(--Gray-600);
-} */
 
-.change_plan {
+.change-plan {
   color: var(--Blue-700);
   text-decoration: underline;
   font-weight: 900;
@@ -110,7 +107,7 @@ padding-top: 1.2em;
   justify-content: center;
   padding-top: 1em;
 }
-.proceed_button {
+.proceed-button {
   padding: 1.2em;
   width: 100%;
   border-radius: 10px;
@@ -121,21 +118,21 @@ padding-top: 1.2em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   /* box-shadow: [horizontal-offset] [vertical-offset] [blur-radius] [spread-radius] [color]; */
 }
-.cancel_order {
+.cancel-order {
   padding-top: 1.2em;
   font-weight: 900;
   font-size: 0.9em;
 }
-.order_subtitle,
+.order-subtitle,
 .year,
 .cancel {
   color: var(--Gray-600);
 }
-.proceed_button:hover{
+.proceed-button:hover{
   background-color: var(--Blue-800);
 
 }
-.change_plan:hover{
+.change-plan:hover{
 color: var(--Blue-800);
 }
 .cancel:hover {
