@@ -17,8 +17,9 @@ button {
   --Gray-500: hsl(201, 18%, 78%);
   --Gray-300: hsla(206, 38%, 88%, 0.211);
   --White: hsl(0, 0%, 100%);
+  --White--100: hsla(0, 29%, 95%, 0.141);
 }
-.body_wrapper {
+.body-wrapper {
   display: grid;
   place-items: center;
   min-height: 100dvh;
@@ -26,7 +27,7 @@ button {
   /* padding-bottom: 2em; */
   width: 100%;
 }
-.main_wrapper {
+.main-wrapper {
   /* max-width: 1110px; */
   width: 100%;
   display: grid;
@@ -34,7 +35,7 @@ button {
   gap: 6em;
   padding-inline: 0.5em;
 }
-.header_card {
+.header-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,36 +50,39 @@ button {
 img {
   vertical-align: middle;
   height: auto;
+  max-width: 100%;
 }
 .logo {
   width: 30%;
 }
-.header_infocard {
+.header-infocard {
   text-align: center;
   padding-inline: 0.5em;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.info_headtext {
+.info-headtext {
   font-size: 1.7em;
   color: var(--Gray-700);
 }
-.info_subtext {
+.info-subtext {
   font-size: 0.88em;
   line-height: 1.5;
   padding-inline: 0.9em;
   color: var(--Gray-500);
 }
-.btn_group {
+.btn-group {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
   margin-bottom: 2em;
-  width: 80%;
+  /* max-width: 80%;
+  width: 75%; */
+  width: 85%;
 }
-.btn_1,
-.btn_2 {
+.btn-1,
+.btn-2 {
   border-radius: 50px;
   padding: 1em;
   border: none;
@@ -87,15 +91,15 @@ img {
   font-size: 0.9em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
-.btn_1 {
+.btn-1 {
   background-color: var(--Green-500);
 }
-.btn_2 {
+.btn-2 {
   background-color: var(--Blue-100);
 }
 
 /* ABOUT SECTION STYLES */
-.about_card {
+.about-card {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -103,7 +107,7 @@ img {
   gap: 3em;
   padding: 1.5em;
 }
-.about_infocard {
+.about-infocard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,22 +115,22 @@ img {
   gap: 1em;
   text-align: center;
 }
-.info_about_text {
+.info-about-text {
   font-size: 1.5em;
   color: var(--Gray-700);
 }
-.info_about_subtext {
+.info-about-subtext {
   color: var(--Gray-500);
   font-size: 1em;
   line-height: 1.5;
 }
-.feature_info {
+.feature-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5em;
 }
-.feature_info_card {
+.feature-info-card {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -134,26 +138,28 @@ img {
   justify-content: center; */
   text-align: center;
 }
-.search_card,
-.iCloud_card,
-.history_card {
+.search-card,
+.iCloud-card,
+.history-card {
   display: grid;
   gap: 0.5em;
 }
-.card_subtext {
+.card-subtext {
   color: var(--Gray-500);
   font-size: 0.9em;
 }
 
 /* ACCESS CARD STYLES */
-.access_card {
+.access-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5em;
+  text-align: center;
+  justify-content: center;
+  gap: 3em;
   padding: 1.5em;
 }
-.access_info {
+.access-info {
   text-align: center;
   display: flex;
   gap: 1em;
@@ -161,13 +167,13 @@ img {
 
   color: var(--Gray-700);
 }
-.card_text{
+.card-text {
   color: var(--Gray-700);
 }
-.info_access_text {
+.info-access-text {
   text-transform: capitalize;
 }
-.info_access_subtext {
+.info-access-subtext {
   font-size: 0.89em;
   color: var(--Gray-500);
   line-height: 1.5;
@@ -175,86 +181,90 @@ img {
 }
 
 /* TOOL CARD STYLES */
-.tool_card {
+.tool-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
   padding: 1.5em;
   text-align: center;
   gap: 4em;
 }
-.tool_info {
+.tool-info {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.info_tool_text,
-.blacklist_text,
-.icon_text,
-.preview_text {
+.info-tool-text,
+.blacklist-text,
+.icon-text,
+.preview-text {
   color: var(--Gray-700);
 }
-.info_tool_subtext {
+.info-tool-subtext {
   line-height: 1.5;
   color: var(--Gray-500);
 }
-.tool_list_items {
+.tool-list-items {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2em;
 }
-.list_item {
+.list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2em;
 }
-.item1_info,
-.item2_info,
-.item3_info {
+.item1-info,
+.item2-info,
+.item3-info {
   display: grid;
   gap: 1em;
 }
-.blacklist_subtext,
-.icontext_subtext,
-.preview_subtext {
+.blacklist-subtext,
+.icontext-subtext,
+.preview-subtext {
   color: var(--Gray-500);
   font-size: 0.9em;
-  line-height: 1.5;
+  line-height: 1.4;
 }
-.blacklist_subtext {
+.blacklist-subtext {
   padding-inline: 0.9em;
 }
 
 /* SPONSORS STYLES */
-.sponsors_card {
+.sponsors-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3em;
+  justify-content: center;
+  gap: 4em;
   padding: 1.5em;
 }
 
 /* DOWNLOAD STYLES */
-.download_card {
+.download-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5em;
-  gap: 3em;
+  gap: 2em;
 }
-.download_info {
+.download-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 1em;
 }
-.info_download_text {
+.info-download-text {
   color: var(--Gray-700);
   font-size: 1.6em;
 }
-.info_download_subtext {
+.info-download-subtext {
   color: var(--Gray-500);
   line-height: 1.4;
   font-size: 0.98em;
@@ -266,15 +276,17 @@ img {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 1em;
+  gap: 2em;
   justify-content: center;
-  padding-top: 2em;
+  margin-top: 5em;
   background-color: var(--Gray-300);
+  font-size: 0.8em;
+  color: var(--Gray-700);
 }
 .logo2 {
   width: 40%;
 }
-.left_card {
+.left-card {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -284,8 +296,8 @@ img {
 .icon {
   padding: 1.5em;
 }
-.contact_FAQ,
-.privacy_kit,
+.contact-FAQ,
+.privacy-kit,
 .install {
   display: grid;
   gap: 1em;
@@ -303,60 +315,125 @@ img {
   padding: 0.6em;
 }
 
-
-@media(min-width: 60em){
-  .body_wrapper{
+.faq:hover,
+.contact:hover,
+.privacy:hover,
+.kit:hover,
+.install:hover,
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover{
+  color: var(--Green-500);
+}
+.btn-1:hover,
+.btn-2:hover{
+  transform: scale(90%);
+}
+@media (min-width: 60em) {
+  .body-wrapper {
     background-image: url(./images/bg-header-desktop.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
   }
-  
-  .header_card{
-    background-image: none;
-  }
-  .logo{
-    width: 9%;
-  }
-  .header_infocard{
-    padding-inline: 0.9em;
-    width: 50%;
-  }
-  .info_subtext{
-    padding-inline: 2em;
-  
-  }
-  .btn_group{
-    flex-direction: row;
-     align-items: center;
-  justify-content: center;
-  }
-  .btn_1,
-  .btn_2{
-    width: 25%;
-  }
-  .about_card{
+  .main-wrapper {
+    place-content: center;
     padding: 0;
   }
-  .about_infocard{
+  .header-card {
+    background-image: none;
+  }
+  .logo {
+    width: 9%;
+  }
+  .info-subtext {
+    padding: 0;
+    text-align: center;
+  }
+  .header-infocard {
+    padding-inline: 0.9em;
+    width: 35%;
+  }
+  .btn-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-1,
+  .btn-2 {
+    width: 20%;
+  }
+  .about-card {
+    padding: 0;
+  }
+  .info-about-subtext {
+    width: 45%;
+  }
+  .feature-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    place-items: inherit;
+  }
+  .computer {
+    width: 95%;
+  }
+  .feature-info-card {
+    text-align: left;
+    padding-right: 6em;
+    padding-left: 2em;
+    width: 70%;
+    gap: 3em;
+  }
+  .info-access-subtext {
+    padding-inline: 1.8em;
+  }
+  .devices {
     width: 60%;
   }
-  .feature_info{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-    
+  .access-info {
+    padding-inline: 2em;
+    width: 45%;
+    text-align: center;
   }
-.computer{
-    width: 90%;
-  
+  .tool-list-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    text-align: center;
+    width: 75.5%;
   }
- .feature_info_card{
-  text-align: left;
-  padding-right: 6em;
- 
- }
- .info_access_subtext{
- 
-  padding-inline: 1.8em;
- }
+  .blacklist-subtext {
+    padding: 0;
+  }
+  .download-info {
+    width: 40%;
+  }
+  .sponsors-card {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sponsors-card img {
+    width: 11%;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  .left-card {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 4em;
+    text-align: justify;
+  }
+  .install {
+    align-items: normal;
+  }
+  .socials {
+    padding: 0;
+    gap: 0;
+  }
 }
