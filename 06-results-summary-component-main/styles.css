@@ -39,7 +39,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 .card_main {
-  max-width: 390px;
+  /* max-width: 390px; */
   width: 100%;
   background-color: var(--White);
   border-radius: 10px;

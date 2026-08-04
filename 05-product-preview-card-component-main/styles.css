@@ -22,12 +22,13 @@
   min-height: 100dvh;
   background-color: var(--Cream);
   font-family: "Montserrat", sans-serif;
+  padding: 1.5em;
 }
 .site-main {
   display: grid;
   place-items: center;
   text-align: left;
-  max-width: 300px;
+  /* max-width: 300px; */
   width: 100%;
   background-color: var(--White);
   border-radius: 10px;
@@ -96,11 +97,11 @@ button {
   width: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 60em) {
   .site-main {
     display: grid;
     grid-template-columns: 255px 255px;
-    max-width: 900px;
+    /* max-width: 900px; */
     width: 100%;
   }
   .site-text {
