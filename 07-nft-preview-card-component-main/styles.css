@@ -21,7 +21,7 @@
   --Blue-800: hsl(215, 32%, 27%);
   --White: hsl(0, 0%, 100%);
 }
-.body_container {
+.body__container {
   display: grid;
   place-content: center;
   min-height: 100dvh;
@@ -31,7 +31,7 @@
   font-size: 0.9em;
   font-weight: 400;
 }
-.main_img {
+.main__img {
   vertical-align: middle;
   width: 100%;
 
@@ -46,7 +46,7 @@
 .img {
   position: relative;
 }
-.overlay_wrapper {
+.overlay__wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,11 +60,11 @@
   opacity: 0;
   justify-content: center;
 }
-.img:hover .overlay_wrapper {
+.img:hover .overlay__wrapper {
   opacity: 1;
   cursor: pointer;
 }
-.main_card {
+.main__card {
   background-color: var(--Blue-900);
   border: 2px var(--Grey-800) solid;
   max-width: 300px;
@@ -75,9 +75,8 @@
   justify-content: center;
   align-items: center;
   padding: 1.2em 1.2em 0 1.2em;
-  
 }
-.main_information {
+.main__information {
   padding: 1.5em 0;
 }
 .title {
@@ -87,9 +86,8 @@
 .subtitle {
   font-size: 1.1em;
   line-height: 1.5;
-
 }
-.card_details {
+.card__details {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,18 +101,18 @@
 .highlight {
   color: var(--Cyan-400);
 }
-.date_time {
+.date__time {
   display: flex;
   gap: 0.4em;
   align-items: center;
 }
-.avatar_bio {
+.avatar__bio {
   display: flex;
   align-items: center;
   gap: 0.9em;
   padding-top: 1.3em;
 }
-.avatar_img {
+.avatar__img {
   max-width: 35px;
   width: 100%;
   border-radius: 20px;
