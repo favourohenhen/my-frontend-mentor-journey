@@ -28,7 +28,6 @@
   display: grid;
   place-items: center;
   text-align: left;
-  /* max-width: 300px; */
   width: 100%;
   background-color: var(--White);
   border-radius: 10px;
@@ -101,7 +100,6 @@ button {
   .site-main {
     display: grid;
     grid-template-columns: 255px 255px;
-    /* max-width: 900px; */
     width: 100%;
   }
   .site-text {
