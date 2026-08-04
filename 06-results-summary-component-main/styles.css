@@ -29,7 +29,7 @@
   --Light-lavender: hsl(241, 100%, 89%);
   --Dark-gray-blue: hsl(224, 30%, 27%);
 }
-.card_container {
+.card-container {
   display: grid;
   place-content: center;
   min-height: 100dvh;
@@ -38,14 +38,14 @@
   text-wrap: pretty;
   font-family: "Hanken Grotesk", sans-serif;
 }
-.card_main {
+.card-main {
   width: 100%;
   background-color: var(--White);
   border-radius: 10px;
   overflow: hidden;
 }
 
-.card_result {
+.card-result {
   background: linear-gradient(
     to bottom,
     hsl(252, 100%, 67%),
@@ -62,7 +62,7 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.card_result_text {
+.card-result-text {
   font-size: 0.9em;
   color: var(--Pale-blue);
   opacity: 30%;
@@ -82,17 +82,17 @@
   );
 }
 
-.circle_score {
+.circle-score {
   font-size: 55px;
   font-weight: 800;
 }
-.circle_total {
+.circle-total {
   padding: 0;
   font-size: 0.65em;
   color: var(--Pale-blue);
   opacity: 40%;
 }
-.big_text {
+.big-text {
   font-size: 1.4em;
   font-weight: bold;
 }
@@ -101,7 +101,7 @@
   font-size: 0.95em;
   padding: 1em 2em 0 2em;
 }
-.summary_container {
+.summary-container {
   border: 2px var(--White) solid;
   padding: 1.5em 2em;
 }
@@ -110,7 +110,7 @@
   font-weight: bold;
   padding-bottom: 1.5em;
 }
-.summary_card {
+.summary-card {
   display: grid;
 
   gap: 1em;
@@ -147,19 +147,19 @@ img {
   font-weight: 600;
 }
 /*bg color and color of each result card*/
-.reaction_card {
+.reaction-card {
   background-color: hsla(0, 100%, 67%, 0.068);
   color: var(--Light-red);
 }
-.memory_card {
+.memory-card {
   background-color: hsla(39, 100%, 56%, 0.068);
   color: var(--Orangey-yellow);
 }
-.verbal_card {
+.verbal-card {
   background-color: hsla(166, 100%, 37%, 0.068);
   color: var(--Green-teal);
 }
-.visual_card {
+.visual-card {
   background-color: hsla(234, 85%, 45%, 0.068);
   color: var(--Cobalt-blue);
 }
@@ -180,14 +180,14 @@ button:hover {
   border: none;
 }
 @media (min-width: 768px) {
-  .card_main {
+  .card-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     max-width: 600px;
   }
-  .card_result,
-  .card_main {
+  .card-result,
+  .card-main {
     border-radius: 25px;
   }
   .comment {
