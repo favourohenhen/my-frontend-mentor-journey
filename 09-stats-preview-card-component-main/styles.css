@@ -22,7 +22,7 @@
   /* (stat headings) */
   --White-60: hsla(0, 0%, 100%, 0.6);
 }
-.site_body {
+.site-body {
   display: grid;
   place-content: center;
   min-height: 100dvh;
@@ -30,7 +30,7 @@
   background-color: var(--Navy-950);
   width: 100%;
 }
-.main_site {
+.main-site {
   display: grid;
   place-items: center;
   max-width: 300px;
@@ -54,29 +54,29 @@ img {
   mix-blend-mode: multiply;
   opacity: 0.75;
 }
-.content_card {
+.content-card {
   background-color: var(--Blue-950);
 }
-.content_head {
+.content-head {
   padding: 1.5em;
   font-family: "Lexend Deca", sans-serif;
   text-align: center;
 }
-.head_text {
+.head-text {
   font-size: 1.49em;
   padding-bottom: 0.6em;
   line-height: 1.2;
 }
-.color_purple {
+.color-purple {
   color: var(--Purple-500);
 }
-.head_subinfo {
+.head-subinfo {
   font-size: 0.75em;
   text-wrap: balance;
   line-height: 1.5;
   color: var(--White-750);
 }
-.company_stats {
+.company-stats {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,14 +98,14 @@ img {
 }
 
 @media (min-width: 768px) {
-  .main_site {
+  .main-site {
     display: flex;
     max-width: 800px;
     width: 100%;
     border-radius: 0;
     text-align: left;
   }
-  .content_card {
+  .content-card {
     order: 1;
     padding: 0 2em;
     display: flex;
@@ -120,20 +120,20 @@ img {
     height: auto;
     overflow: hidden;
   }
-  .content_head {
+  .content-head {
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.9em;
   }
-  .head_text {
+  .head-text {
     font-size: 1.5em;
   }
-  .head_subinfo {
+  .head-subinfo {
     font-size: 0.712em;
   }
-  .company_stats {
+  .company-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
     place-content: center;
