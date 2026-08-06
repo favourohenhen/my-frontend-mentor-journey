@@ -37,8 +37,6 @@
   object-fit: contain;
   overflow: hidden;
   object-position: center;
-  /* margin: auto;
-  height: auto; */
   border-radius: 22px;
 }
 .img {
