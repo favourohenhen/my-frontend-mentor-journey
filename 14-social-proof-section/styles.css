@@ -19,45 +19,45 @@
   --Light-Grayish-Magenta: hsl(300, 24%, 96%);
   --White: hsl(0, 0%, 100%);
 }
-.body_card {
+.body-card {
   display: grid;
   place-items: center;
   min-height: 100dvh;
   width: 100%;
-  padding: 2.5em;
+  padding: 2.5em 0;
   font-family: "League Spartan", sans-serif;
   background-position:
     top left,
     bottom right;
   background-repeat: no-repeat, no-repeat;
-  padding: 1.5rem;
   background-image:
     url(./images/bg-pattern-top-mobile.svg),
     url(./images/bg-pattern-bottom-mobile.svg);
 }
 
-.main_card {
+.main-card {
   width: 100%;
-  max-width: 1110px; /*This made building the desktop flexible*/
+   max-width: 1110px;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 0 0.5em;
 }
-.header_main {
+.header-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
   text-align: center;
 }
-.header_card {
+.header-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
 }
-.head_text {
-  font-size: 2.9em;
+.head-text {
+  font-size: 2em;
   padding-inline: 1.5em;
   color: var(--Very-Dark-Magenta);
   font-weight: 800;
@@ -65,13 +65,13 @@
   letter-spacing: -1px;
 }
 
-.head_subtext {
+.head-subtext {
   color: var(--Dark-Grayish-Magenta);
-  font-size: 1.3rem;
+  font-size: 1.2em;
   font-weight: 500;
   line-height: 1.6;
 }
-.rating_card {
+.rating-card {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -86,14 +86,14 @@
   background-color: var(--Light-Grayish-Magenta);
   color: var(--Very-Dark-Magenta);
   font-weight: 700;
-  padding: 1.5em;
+  padding: 1.2em;
   border-radius: 12px;
 }
 .text {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 700;
 }
-.stars_icon {
+.stars-icon {
   display: inline-block;
   width: 100px; /* 5 stars * 20px = 100px total width */
   height: 16px; /* Height of 1 star image */
@@ -102,16 +102,16 @@
   background-repeat: space; /* Repeats horizontally */
   background-position: center;
 }
-.testimonial_card {
+.testimonial-card {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
 }
 
-.card_1,
-.card_2,
-.card_3 {
+.card-1,
+.card-2,
+.card-3 {
   background-color: var(--Very-Dark-Magenta);
   color: var(--White);
   border-radius: 12px;
@@ -129,7 +129,7 @@
   gap: 2em;
   align-items: center;
 }
-.avatar_info {
+.avatar-info {
   gap: 0.3em;
   display: grid;
 }
@@ -138,11 +138,11 @@ img {
   border-radius: 50px;
   height: auto;
 }
-.avatar_name,
+.avatar-name,
 .red {
-  font-size: 1.2em;
+  font-size: 1em;
 }
-.comment_text {
+.comment-text {
   font-size: 1.3em;
   font-weight: 400;
   line-height: 1.6;
@@ -150,33 +150,31 @@ img {
 
 /* DESKTOP MODE */
 
-@media (min-width: 60em) {
-  .body_card {
+@media (min-width: 768px) {
+  .body-card {
     background-image:
       url(./images/bg-pattern-top-desktop.svg),
       url(./images/bg-pattern-bottom-desktop.svg);
   }
-  .main_card {
+  .main-card {
     width: 100%;
-    max-width: 1110px;
+    
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    padding: 0 2em;
   }
-  .header_main {
-    flex-direction: row;
-    align-items: flex-start;
+  .header-main {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
     text-align: left;
-    gap: 6rem;
   }
-  .header_card {
-    width: 45%;
-    flex-shrink: 0;
+  .header-card {
     display: flex;
     align-items: flex-start;
   }
 
-  .head_text {
+  .head-text {
     font-size: 3.9em;
     padding: 0;
   }
@@ -184,22 +182,20 @@ img {
   .rating {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 1.5em;
+    justify-content: space-evenly;
+    padding: 1em;
     align-items: center;
     width: 100%; /* Fills the container column */
-    max-width: 500px;
   }
   .text {
     text-align: end;
-    gap: 4em;
+    gap: 2em;
     font-size: 1.3em;
   }
   .comment {
-    font-size: 1.3975em;
     line-height: 1.2;
   }
-
+/* translateX(positive) down, negative opposite */
   .rating:nth-child(1) {
     transform: translateX(0);
   }
@@ -211,28 +207,29 @@ img {
   .rating:nth-child(3) {
     transform: translateX(80px); /* Pushes 3rd bar further right */
   }
-  .testimonial_card {
+  .testimonial-card {
+   width: 100%;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     align-items: start;
   }
 }
-.comment_text {
-  font-size: 1.05rem;
+.comment-text {
+  font-size: 1.06rem;
 }
-.card_1,
-.card_2,
-.card_3 {
+.card-1,
+.card-2,
+.card-3 {
   padding: 2.5rem 2.5rem;
 }
-.card_1:nth-child(1) {
+.card-1:nth-child(1) {
   transform: translateY(0);
 }
 
-.card_2:nth-child(2) {
+.card-2:nth-child(2) {
   transform: translateY(16px); /* Drops Irene's card down */
 }
 
-.card_3:nth-child(3) {
+.card-3:nth-child(3) {
   transform: translateY(32px); /* Drops Anne's card further down */
 }
