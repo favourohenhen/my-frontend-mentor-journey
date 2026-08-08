@@ -15,6 +15,7 @@ button {
   --Blue-100: hsl(233, 100%, 69%);
   --Gray-700: hsl(210, 10%, 33%);
   --Gray-500: hsl(201, 18%, 78%);
+  --Gray-510: hsl(200, 8%, 71%);
   --Gray-300: hsla(206, 38%, 88%, 0.211);
   --White: hsl(0, 0%, 100%);
   --White--100: hsla(0, 29%, 95%, 0.141);
@@ -24,11 +25,10 @@ button {
   place-items: center;
   min-height: 100dvh;
   font-family: "Bai Jamjuree", sans-serif;
-  /* padding-bottom: 2em; */
+
   width: 100%;
 }
 .main-wrapper {
-  /* max-width: 1110px; */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -322,14 +322,42 @@ img {
 .install:hover,
 .fa-facebook:hover,
 .fa-twitter:hover,
-.fa-instagram:hover{
+.fa-instagram:hover {
+  color: var(--Green-500);
+}
+.faq:focus-visible,
+.contact:focus-visible,
+.privacy:focus-visible,
+.kit:focus-visible,
+.install:focus-visible {
+  color: var(--Green-500);
+}
+ul li {
+  list-style: none;
+}
+.footer-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+a {
+  text-decoration: none;
+  color: var(--Gray-700);
+}
+.social:focus-visible i{
   color: var(--Green-500);
 }
 .btn-1:hover,
-.btn-2:hover{
+.btn-2:hover {
   transform: scale(90%);
 }
-@media (min-width: 60em) {
+.btn-1:focus-visible,
+.btn-2:focus-visible {
+  transform: scale(90%);
+  border: none;
+}
+@media (min-width: 746px) {
   .body-wrapper {
     background-image: url(./images/bg-header-desktop.png);
     background-position: top;
@@ -339,6 +367,20 @@ img {
   .main-wrapper {
     place-content: center;
     padding: 0;
+    font-size: 1.02rem;
+  }
+  .info-subtext,
+  .info-about-subtext,
+  .card-subtext,
+  .info-access-subtext,
+  .info-tool-subtext,
+  .blacklist-subtext,
+  .icontext-subtext,
+  .preview-subtext,
+  .info-download-subtext,
+  .a {
+    color: var(--Gray-510);
+    font-weight: 500;
   }
   .header-card {
     background-image: none;
@@ -361,7 +403,7 @@ img {
   }
   .btn-1,
   .btn-2 {
-    width: 20%;
+    width: 15%;
   }
   .about-card {
     padding: 0;
@@ -416,18 +458,31 @@ img {
   .sponsors-card img {
     width: 11%;
   }
-  .footer {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-  }
+  /* nav ul{
+  
+  display: flex;
+  justify-content: baseline;
+  gap: 1.3em;
+ } */
+
+  .footer,
   .left-card {
     flex-direction: row;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
     gap: 4em;
-    text-align: justify;
+    text-align: center;
+  }
+
+  .contact-FAQ,
+  .privacy-kit,
+  .install {
+    display: block;
+    gap: 1em;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
   }
   .install {
     align-items: normal;
@@ -435,5 +490,13 @@ img {
   .socials {
     padding: 0;
     gap: 0;
+  }
+  footer,
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    text-align: left;
+    list-style-type: none;
   }
 }
