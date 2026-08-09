@@ -164,6 +164,8 @@ img {
   display: flex;
   gap: 1em;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   color: var(--Gray-700);
 }
@@ -345,7 +347,7 @@ a {
   text-decoration: none;
   color: var(--Gray-700);
 }
-.social:focus-visible i{
+.social:focus-visible i {
   color: var(--Green-500);
 }
 .btn-1:hover,
@@ -367,7 +369,7 @@ a {
   .main-wrapper {
     place-content: center;
     padding: 0;
-    font-size: 1.02rem;
+    font-size: 1.1rem;
   }
   .info-subtext,
   .info-about-subtext,
@@ -378,7 +380,7 @@ a {
   .icontext-subtext,
   .preview-subtext,
   .info-download-subtext,
-  .a {
+  .nav-list {
     color: var(--Gray-510);
     font-weight: 500;
   }
@@ -431,12 +433,15 @@ a {
     padding-inline: 1.8em;
   }
   .devices {
-    width: 60%;
+    width: 65%;
   }
   .access-info {
     padding-inline: 2em;
     width: 45%;
-    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .tool-list-items {
     display: grid;
@@ -472,6 +477,7 @@ a {
     align-items: center;
     gap: 4em;
     text-align: center;
+    
   }
 
   .contact-FAQ,
@@ -483,6 +489,7 @@ a {
   .nav-list {
     display: flex;
     flex-direction: row;
+    font-size: 0.9rem;
   }
   .install {
     align-items: normal;
