@@ -127,7 +127,7 @@ img {
   }
   .supervisor-card {
     grid-column: 1;
-    grid-row: 2 /  2; /* Spans across row 2 and row 2 */
+    grid-row: 2 / span 2; /* Spans across row 2 and row 2 */
     align-self: center;
   }
   .supervisor-card,
@@ -136,7 +136,7 @@ img {
   }
   .calculator-card {
     grid-column: 3;
-    grid-row: 2 /  2; /* Spans across row 2 and row 2 */
+    grid-row: 2 / span  2; /* Spans across row 2 and row 2 */
     align-self: center;
   }
   .team-card {
