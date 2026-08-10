@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+
+  --White: hsl(0, 0%, 100%);
+--Cream: hsla(0, 0%, 50%, 0.075);
+  --Black: hsl(0, 0%, 7%);
+}
+.site-body {
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  width: 100%;
+  padding: 1.5em 0;
+  font-family: "DM Sans",sans-serif;
+  background-color: var(--Cream);
+}
+.site-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    max-width: 300px;
+    gap: 3em;
+    /* padding: 0 0.5em; */
+}
+img{
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+.faster-ai-card{
+    color: var(--White);
+    background-color: var(--Purple-500);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em 0.9em;
+    border-radius: 12px;
+}
+.faster-ai-text{
+    font-size: 2em;
+    padding-inline: 0.8em;
+}
+.yellow{
+    color: var(--Yellow-500);
+}
+.stars{
+    padding-top: 0.5em;
+}
+.faster-ai-subtext{
+    font-size: 1em;
+opacity: 75%;
+font-weight: 300;
+}
+.account-card{
+    background-color: var(--White);
+    padding: 0.5em;
+     border-radius: 12px;
+}
+.account-text{
+    font-weight: 700;
+    line-height: 0.9;
+    font-size: 1.3em;
+    color: var(--Black);
+   padding: 0.4em;
+}
+.posting-card{
+    background-color: var(--Yellow-500);
+    padding-inline-start: 0.8em;
+    padding-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
