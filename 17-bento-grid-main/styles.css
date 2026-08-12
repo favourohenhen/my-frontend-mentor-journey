@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+/* =====================================================
+   GLOBAL RESET
+   Removes default browser margin/padding and sets
+   box-sizing: border-box so padding and border are
+   included in element dimensions — prevents overflow.
+===================================================== */
 *,
 *::before,
 *::after {
@@ -8,6 +14,12 @@
   box-sizing: border-box;
 }
 
+/* =====================================================
+   DESIGN TOKENS
+   All brand colours are declared as CSS custom
+   properties so every card rule references a variable
+   instead of a raw value — easy to update globally.
+===================================================== */
 :root {
   --Purple-100: hsl(254, 88%, 90%);
   --Purple-500: hsl(256, 67%, 59%);
@@ -16,75 +28,547 @@
   --Yellow-500: hsl(39, 100%, 71%);
 
   --White: hsl(0, 0%, 100%);
---Cream: hsla(0, 0%, 50%, 0.075);
+  /* Cream: a very faint warm-grey background matching the reference page bg */
+  --Cream: hsla(0, 0%, 50%, 0.075);
   --Black: hsl(0, 0%, 7%);
 }
+
+/* =====================================================
+   PAGE WRAPPER
+   CSS grid + place-content centres the bento grid
+   both horizontally and vertically in the viewport.
+===================================================== */
 .site-body {
   display: grid;
   place-content: center;
   min-height: 100dvh;
   width: 100%;
-  padding: 1.5em 0;
-  font-family: "DM Sans",sans-serif;
+  /* Vertical padding so cards never touch the viewport edge on any screen */
+  padding: 1.5em 1em;
+  font-family: "DM Sans", sans-serif;
   background-color: var(--Cream);
 }
-.site-main{
+
+/* =====================================================
+   BENTO GRID — MOBILE FIRST
+   A single flex column on small screens. The desktop
+   media query below converts this to a CSS grid.
+===================================================== */
+.bento-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Shared border-radius for every element inside the grid */
+.bento-grid * {
+  border-radius: 10px;
+}
+
+/* Prevent images stretching outside their containers on any screen */
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: HERO  (purple · "Social Media 10x Faster…")
+   Uses flex-column + center alignment so the headline,
+   star row, and subtext stack neatly in the middle.
+───────────────────────────────────────────────────── */
+.card-hero {
+  color: var(--White);
+  background-color: var(--Purple-500);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2em 0.9em;
+}
+
+.card-hero-text {
+  font-size: 2em;
+  padding-inline: 0.8em;
+}
+
+/* "10x" accent colour inside the hero headline */
+.yellow {
+  color: var(--Yellow-500);
+}
+
+.stars {
+  padding-top: 0.5em;
+}
+
+.card-hero-subtext {
+  font-size: 1em;
+  opacity: 75%;
+  font-weight: 300;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: MANAGE  (white · "Manage multiple accounts…")
+───────────────────────────────────────────────────── */
+.card-manage {
+  background-color: var(--White);
+  padding: 0.5em;
+  overflow: hidden;
+}
+
+.card-manage-text {
+  font-weight: 700;
+  line-height: 0.9;
+  font-size: 1.2em;
+  color: var(--Black);
+  padding: 0.4em;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: POST  (yellow · "Maintain a consistent posting…")
+   The calendar illustration is rendered as a CSS
+   background so it can be cropped/positioned freely.
+───────────────────────────────────────────────────── */
+.card-post {
+  background-color: var(--Yellow-500);
+  padding-inline-start: 0.8em;
+  padding-top: 0.9em;
+  display: grid;
+  gap: 1em;
+}
+
+.card-post img {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-post-text {
+  font-size: 1.2em;
+  line-height: 0.9;
+  padding-inline-end: 1em;
+}
+
+/* Calendar illustration block: fixed height + background-size:cover keeps
+   the artwork proportional regardless of the card's actual width. */
+.calender {
+  display: block;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./assets/images/illustration-consistent-schedule.webp");
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: SCHEDULE  (light purple · "Schedule to social…")
+───────────────────────────────────────────────────── */
+.card-schedule {
+  background-color: var(--Purple-100);
+  display: flex;
+  flex-direction: column;
+  /* Mobile: centre; overridden to flex-start on desktop */
+  align-items: center;
+  gap: 1em;
+  padding: 1.5em 1em;
+}
+
+.card-schedule-text {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.card-schedule-subtext {
+  text-align: center;
+  font-size: 0.98em;
+  padding-inline: 0.5em;
+  color: var(--Black);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: GROW  (dark purple · "Grow followers…")
+   Mobile: stacked. Desktop: horizontal row (see below).
+───────────────────────────────────────────────────── */
+.card-grow {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.card-grow-text {
+  font-size: 1.5em;
+  padding-inline: 1.89em;
+  line-height: 0.9;
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: GROWTH  (white · ">56% faster audience growth")
+───────────────────────────────────────────────────── */
+.card-growth {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 1em;
+}
+
+/* Mobile: avatar image takes 50% of the card width */
+.avatar {
+  width: 50%;
+}
+
+/* The large percentage figure */
+.smaller {
+  font-size: 2.4em;
+  font-weight: 700;
+  display: block;
+}
+
+.card-growth-subtext {
+  font-size: 0.89em;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: CREATE  (cream · "Create and schedule content…")
+───────────────────────────────────────────────────── */
+.card-create {
+  background-color: var(--Yellow-100);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card-create-text {
+  font-size: 1.4em;
+  line-height: 0.9;
+}
+
+/* Italic purple "quicker." span */
+.purple {
+  color: var(--Purple-500);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────
+   CARD: AI  (yellow · "Write your content using AI")
+───────────────────────────────────────────────────── */
+.card-ai {
+  background-color: var(--Yellow-500);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card-ai-text {
+  font-size: 1.5em;
+  line-height: 0.9;
+}
+
+/* =====================================================
+   DESKTOP LAYOUT  (≥ 768 px)
+
+   The reference is a strict 4-column, 3-row bento
+   grid.  Named areas map to the mockup like this:
+
+   col →    1          2           3         4
+        ┌──────────┬──────────────────────┬──────────┐
+   row 1│  create  │    hero (×2 cols)    │ schedule │
+        │ (×2 rows)├──────────┬───────────┤ (×2 rows)│
+   row 2│          │  manage  │   post    │          │
+        ├──────────┼──────────┴───────────┴──────────┤
+   row 3│    ai    │  growth  │  grow (spans 2 cols)  │
+        └──────────┴──────────┴───────────────────────┘
+
+   KEY FIXES vs the previous code:
+   1. grid-template-columns rebalanced from
+        1.08fr 1.52fr 1.35fr 1.12fr
+      to
+        1fr 1.4fr 1.2fr 1fr
+      The old col 2 was too wide which squashed the
+      schedule card and made the hero look off-center.
+
+   2. grid-template-rows changed from explicit fr values
+      (1.35fr 1fr 1.2fr) to auto so card heights are
+      driven by their content, not locked proportions.
+      Fixed fr rows were causing cards to over/under-fill.
+
+   3. Per-card overrides (see below) fix:
+      - hero text size (was too small at 1.5em)
+      - create card: space-between pushes illustration
+        to the card bottom, matching the reference
+      - schedule card: left-aligned, illustration bleeds
+        to the card right edge
+      - manage card: image bleed + correct text sizing
+      - ai card: illustration pushed to bottom
+      - growth card: avatar fills full card width
+      - grow card: row layout with correct proportions
+===================================================== */
+@media only screen and (min-width: 768px) {
+  /* ── Grid container ── */
+  .bento-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    max-width: 300px;
-    gap: 3em;
-    /* padding: 0 0.5em; */
-}
-img{
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-}
-.faster-ai-card{
-    color: var(--White);
-    background-color: var(--Purple-500);
-    display: flex;
-    flex-direction: column;
-    gap: 0.6em;
-    align-items: center;
+
+    /* FIX 1: Rebalanced columns.
+       Col 1 (create/ai) is the narrowest anchor.
+       Cols 2-3 share the wide middle (hero spans both).
+       Col 4 (schedule) mirrors col 1 for visual symmetry.
+       Previous: 1.08fr 1.52fr 1.35fr 1.12fr — col 2 too wide. */
+    grid-template-columns: 1fr 1.4fr 1.2fr 1fr;
+    grid-template-rows: auto auto auto;
+    max-width: 1110px;
+    grid-template-areas:
+      "create  hero    hero    schedule"
+      "create  hero    hero    schedule"
+      "span     manage  post    schedule"
+      "ai      growth  grow    grow"
+      "ai      growth  grow    grow";
+    gap: 1.5em;
+  }
+
+  /* ── Grid-area assignments (uncreachanged logic, just re-commented) ── */
+
+  /* col 1, rows 1–2 */
+  .card-create {
+    grid-area: create;
+  }
+
+  /* cols 2–3, row 1 */
+  .card-hero {
+    grid-area: hero;
+  }
+
+  /* col 4, rows 1–2 */
+  .card-schedule {
+    grid-area: schedule;
+  }
+
+  /* col 2, row 2 */
+  .card-manage {
+    grid-area: manage;
+  }
+
+  /* col 3, row 2 */
+  .card-post {
+    grid-area: post;
+  }
+
+  /* col 1, row 3 */
+  .card-ai {
+    grid-area: ai;
+  }
+
+  /* col 2, row 3 */
+  .card-growth {
+    grid-area: growth;
+  }
+
+  /* cols 3–4, row 3 */
+  .card-grow {
+    grid-area: grow;
+  }
+
+  .card-create {
     justify-content: center;
-    text-align: center;
-    padding: 2em 0.9em;
-    border-radius: 12px;
-}
-.faster-ai-text{
+    padding: 1.4em 1.2em 0 1.4em;
+    overflow: hidden;
+  }
+
+  .card-create-text {
     font-size: 2em;
-    padding-inline: 0.8em;
-}
-.yellow{
-    color: var(--Yellow-500);
-}
-.stars{
-    padding-top: 0.5em;
-}
-.faster-ai-subtext{
-    font-size: 1em;
-opacity: 75%;
-font-weight: 300;
-}
-.account-card{
-    background-color: var(--White);
-    padding: 0.5em;
-     border-radius: 12px;
-}
-.account-text{
-    font-weight: 700;
-    line-height: 0.9;
-    font-size: 1.3em;
-    color: var(--Black);
-   padding: 0.4em;
-}
-.posting-card{
-    background-color: var(--Yellow-500);
-    padding-inline-start: 0.8em;
-    padding-top: 0.5em;
+    line-height: 1;
+
+    padding-top: 0;
+  }
+
+  .card-create img {
+    align-self: center;
+
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .card-hero {
+    padding: 1.5em 1.8em;
+    font-size: 1.6em;
+  }
+
+  .card-hero-text {
+    line-height: 1;
+    padding-inline: 0;
+  }
+
+  .card-hero-subtext {
+    font-size: 0.9em;
+  }
+
+  .card-schedule {
+    align-items: flex-start;
+
+    padding: 1.8em 0 0 1.6em;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+
+  .card-schedule-text {
+    font-size: 1.4em;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .card-schedule-subtext {
+    text-align: left;
+    font-size: 0.88em;
+    padding-inline: 0;
+  }
+
+  .card-schedule img {
+    width: calc(100% + 1.6em); /* bleed right to the card edge */
+    margin-left: 0;
+    margin-top: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    align-self: flex-end;
+    display: block;
+  }
+
+  .card-manage {
+    padding: 0;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    justify-content: flex-end;
+  }
+
+  /* Platforms illustration bleeds to the card top/right edge */
+  .card-manage img.social {
+    /* FIX: Remove the old padding-left:3em that was mis-centering
+       the image and leaving a visible gap on the left. */
+    width: 100%;
+    object-fit: cover;
+    object-position: left top;
+    border-radius: 0;
+    padding-left: 0;
+  }
+
+  .card-manage-text {
+    /* FIX: Slightly adjusted — the old 1.8em with padding-bottom:3em
+       was adding too much bottom whitespace. Now we let flex handle spacing. */
+    font-size: 1.5em;
+    line-height: 1;
+    padding: 0.6em 0.8em 0.8em;
+  }
+
+  /* ── POST card ──
+     FIX: The card needs flex-column + space-between so the headline
+     reads at the top and the calendar art fills the bottom portion. */
+  .card-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.2em 1em 0 1.2em;
+    overflow: hidden;
+  }
+
+  .card-post-text {
+    font-size: 1.3em;
+    line-height: 1;
+    padding-inline-end: 0;
+  }
+
+  .calender {
+    width: calc(100% + 1.2em);
+
+    margin-left: -1.2em;
+    height: 150px;
+    background-position: top center;
+    background-size: cover;
+    flex-shrink: 0;
+    border-radius: 0;
+  }
+
+  .card-ai {
+    justify-content: space-between;
+    padding: 1.2em 1em 0 1.2em;
+    overflow: hidden;
+    grid-column: 1;
+  }
+
+  .card-ai-text {
+    font-size: 1.4em;
+    line-height: 1;
+  }
+
+  .card-ai img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    align-self: flex-end;
+    margin-top: auto;
+    display: block;
+  }
+
+  .card-growth {
+    justify-content: space-between;
+    padding: 1.2em 1em;
+    overflow: hidden;
+  }
+
+  .card-growth-subtext {
+    font-size: 0.85em;
+    margin-top: -0.5em; /* keep label close to the big number */
+  }
+
+  /* FIX: On desktop the audience avatars should fill the full card
+     width — the old 50% mobile value left them looking tiny. */
+  .avatar {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    margin-top: auto;
+    display: block;
+  }
+
+  .card-grow {
+    flex-direction: row;
+    padding: 1.5em 2em;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 1.5em;
+  }
+
+  .card-grow img.grow {
+    width: 45%;
+    max-width: none;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .card-grow-text {
+    font-size: 1.6em;
+    line-height: 1;
+    padding-inline: 0;
+    text-align: left;
+    flex: 1;
+  }
 }
