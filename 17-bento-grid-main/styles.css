@@ -480,6 +480,7 @@ img {
     justify-content: center;
   }
   .card-create-text {
-    font-size: 2rem;
+    font-size: 1.89rem;
+    line-height: 0.9;
   }
 }
