@@ -1,149 +1,126 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Frontend Mentor | Bento grid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <title>Frontend Mentor | Bento grid</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <body class="site-body">
+    <main class="bento-grid">
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <!-- Create -->
+        <section class="card-create">
+          <h3 class="card-create-text">
+            Create and schedule content <span class="purple">quicker.</span>
+          </h3>
+          <img
+            src="./assets/images/illustration-create-post.webp"
+            alt=""
+            class="create"
+            width="150"
+          />
+        </section>
+        <!-- Write using AI -->
+        <section class="card-ai">
+          <h3 class="card-ai-text">Write your content using AI.</h3>
 
-<body class="site-body">
-<main class="bento-grid">
+          <img
+            src="./assets/images/illustration-ai-content.webp"
+            alt=""
+            class="content"
+            width="200"
+          />
+        </section>
+      </div>
+      <!-- MIDDLE COLUMN -->
+      <div class="middle-column">
+        <!-- Hero -->
+        <section class="card-hero">
+          <h1 class="card-hero-text">
+            Social Media <span class="yellow">10x</span> <em>Faster</em> with AI
+          </h1>
+          <img
+            src="./assets/images/illustration-five-stars.webp"
+            alt=""
+            class="stars"
+            width="160"
+          />
+          <p class="card-hero-subtext">Over 4,000 5-star reviews</p>
+        </section>
+        <!-- Manage -->
+        <section class="card-manage">
+          <img
+            src="./assets/images/illustration-multiple-platforms.webp"
+            alt=""
+            class="social"
+            width="300"
+          />
+          <h2 class="card-manage-text">
+            Manage multiple accounts and platforms.
+          </h2>
+        </section>
+        <!-- Maintain -->
+        <section class="card-post">
+          <h3 class="card-post-text">
+            Maintain a consistent posting schedule.
+          </h3>
 
-  <!-- LEFT COLUMN -->
-  <div class="left-column">
-
-    <!-- Create -->
-    <section class="card-create">
-      <h3 class="card-create-text">
-        Create and schedule content <span class="purple">quicker.</span>
-      </h3>
-
-      <img
-        src="./assets/images/illustration-create-post.webp"
-        alt=""
-        class="create"
-        width="150"
-      />
-    </section>
-
-    <!-- Write using AI -->
-    <section class="card-ai">
-      <h3 class="card-ai-text">Write your content using AI.</h3>
-
-      <img
-        src="./assets/images/illustration-ai-content.webp"
-        alt=""
-        class="content"
-        width="200"
-      />
-    </section>
-
-  </div>
-
-
-  <!-- MIDDLE COLUMN -->
-  <div class="middle-column">
-
-    <!-- Hero -->
-    <section class="card-hero">
-      <h1 class="card-hero-text">
-        Social Media <span class="yellow">10x</span>
-        <em>Faster</em> with AI
-      </h1>
-
-      <img
-        src="./assets/images/illustration-five-stars.webp"
-        alt=""
-        class="stars"
-        width="160"
-      />
-
-      <p class="card-hero-subtext">
-        Over 4,000 5-star reviews
-      </p>
-    </section>
-
-    <!-- Manage -->
-    <section class="card-manage">
-      <img
-        src="./assets/images/illustration-multiple-platforms.webp"
-        alt=""
-        class="social"
-        width="300"
-      />
-
-      <h2 class="card-manage-text">
-        Manage multiple accounts and platforms.
-      </h2>
-    </section>
-
-    <!-- Maintain -->
-    <section class="card-post">
-      <h3 class="card-post-text">
-        Maintain a consistent posting schedule.
-      </h3>
-
-      <div class="calender"></div>
-    </section>
-
-    <!-- Growth -->
-    <section class="card-growth">
-      <p class="card-growth-subtext">
-        <span class="smaller">>56%</span>
-        faster audience growth
-      </p>
-
-      <img
-        src="./assets/images/illustration-audience-growth.webp"
-        alt=""
-        class="avatar"
-        width="300"
-      />
-    </section>
-
-    <!-- Grow -->
-    <section class="card-grow">
-      <img
-        src="./assets/images/illustration-grow-followers.webp"
-        alt=""
-        class="grow"
-        width="200"
-      />
-
-      <h3 class="card-grow-text">
-        Grow followers with non-stop content.
-      </h3>
-    </section>
-
-  </div>
-
-
-  <!-- RIGHT COLUMN -->
-  <div class="right-column">
-
-    <!-- Schedule -->
-    <section class="card-schedule">
-      <h3 class="card-schedule-text">
-        Schedule to social media.
-      </h3>
-<div class="post">
-  <img src="./assets/images/illustration-schedule-posts.webp" alt="" width="700px" />
-</div>
-      <p class="card-schedule-subtext">
-        Optimize post timings to publish content at the perfect time
-        for your audience.
-      </p>
-    </section>
-
-  </div>
-
-</main>
-</body>
-
+          <div class="calender"></div>
+        </section>
+        <!-- Growth -->
+        <section class="card-growth">
+          <p class="card-growth-subtext">
+            <span class="smaller">>56%</span>
+            faster audience growth
+          </p>
+          <img
+            src="./assets/images/illustration-audience-growth.webp"
+            alt=""
+            class="avatar"
+            width="300"
+          />
+        </section>
+        <!-- Grow -->
+        <section class="card-grow">
+          <img
+            src="./assets/images/illustration-grow-followers.webp"
+            alt=""
+            class="grow"
+            width="200"
+          />
+          <h3 class="card-grow-text">Grow followers with non-stop content.</h3>
+        </section>
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="right-column">
+        <!-- Schedule -->
+        <section class="card-schedule">
+          <h3 class="card-schedule-text">Schedule to social media.</h3>
+          <div class="post">
+            <img
+              src="./assets/images/illustration-schedule-posts.webp"
+              alt=""
+              width="700px"
+            />
+          </div>
+          <p class="card-schedule-subtext">
+            Optimize post timings to publish content at the perfect time for
+            your audience.
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
