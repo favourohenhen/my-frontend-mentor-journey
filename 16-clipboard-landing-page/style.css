@@ -405,7 +405,7 @@ a {
   }
   .btn-1,
   .btn-2 {
-    width: 15%;
+    width: unset;
   }
   .about-card {
     padding: 0;
@@ -463,12 +463,6 @@ a {
   .sponsors-card img {
     width: 11%;
   }
-  /* nav ul{
-  
-  display: flex;
-  justify-content: baseline;
-  gap: 1.3em;
- } */
 
   .footer,
   .left-card {
@@ -505,5 +499,45 @@ a {
     gap: 1em;
     text-align: left;
     list-style-type: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+  .header-infocard{
+    width: 45%;
+  }
+  .btn-group{
+    width: 100%;
+  }
+  .btn-1,
+  .btn-2{
+    width: unset;
+  }
+  .info-about-subtext{
+    width: 60%;
+    font-size: 0.9em;
+  }
+  .feature-info-card{
+    padding: 0;
+  }
+  .access-info{
+    width: 70%;
+  }
+  .tool-list-items{
+    width: unset;
+    font-size: 0.9em;
+  }
+  .download-info{
+    width: 55%;
+  }
+  .info-download-text{
+    font-size: 1.56em;
+  }
+  .footer{
+    gap: 0;
+    justify-content: space-evenly;
+  }
+  .left-card{
+    gap: 0;
   }
 }
