@@ -168,6 +168,7 @@ p,
 }
 .sub-text{
     font-size: 0.89em;
+    padding-inline: 0.4em;
 }
 .text{
     font-size: 1.3em;
