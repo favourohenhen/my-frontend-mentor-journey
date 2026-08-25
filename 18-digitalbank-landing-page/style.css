@@ -51,7 +51,7 @@ img {
   gap: 1em;
   justify-content: space-between;
   background-color: var(--White);
-  position: absolute;
+  position: fixed;
   z-index: 10;
   width: 100%;
   top: 0;
@@ -94,7 +94,7 @@ a {
 .hero-bg {
   background-image: url(./images/bg-intro-mobile.svg);
   background-repeat: no-repeat;
-  background-position: 0rem -1rem;
+  background-position: 0rem -2rem;
   background-size: cover;
   position: absolute;
   top: 0;
