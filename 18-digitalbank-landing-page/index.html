@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -16,33 +15,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="site-body">
-    <header class="site-header">
+    <header class="site-header container">
       <a href="#"><img src="./images/logo-dark.svg" alt="" /></a>
       <button
         class="site-nav-toggle"
         aria-label="Open Navigation"
         aria-expanded="false"
       >
-        <img src="./images/icon-hamburger.svg" alt="" />
+        <img src="./images/icon-hamburger.svg" alt="toggle-menu"  class="menu"/>
       </button>
-      <nav class="nav-list">
+      <nav class="nav-list" role="navigation">
         <ul class="list-items">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#articles">Contact</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#articles">Blog</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </nav>
-      <button type="button">Request Invite</button>
+      <button type="button" class="header-btn">Request Invite</button>
     </header>
-    <main class="site-main">
-      <section class="hero">
+    <main class="site-main ">
+      <section class="hero container">
+        <div class="hero-bg"></div>
         <img src="./images/image-mockups.png" alt="" class="hero-img" />
-        <div class="hero-content">
+        <div class="hero-content container">
           <h1 class="hero-text">Next generation digital banking</h1>
           <p class="hero-subtext">
-            Take your financial life online. You r Digitalbank account will be a
+            Take your financial life online. Your Digitalbank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </p>
@@ -51,7 +51,7 @@
       </section>
 
       <!-- ABOUT SECTION -->
-      <section class="about" id="about">
+      <section class="about container" id="about">
         <div class="about-header">
           <h2 class="about-text">Why choose Digitalbank?</h2>
           <p class="about-subtext">
@@ -98,10 +98,10 @@
       <!-- END ABOUT SECTION -->
 
       <!-- ARTICLE SECTION -->
-      <section class="articles" id="articles">
+      <section class="articles container" id="articles">
         <h2 class="article-text">Latest Articles</h2>
         <section class="article-cards">
-          <div class="art1">
+          <div class="art">
             <img src="./images/image-currency.jpg" alt="" class="art-img" />
             <div class="art-content">
               <span class="author">By Claire Robinson</span>
@@ -114,7 +114,7 @@
               </p>
             </div>
           </div>
-          <div class="art2">
+          <div class="art">
             <img src="./images/image-restaurant.jpg" alt="" class="art-img" />
             <div class="art-content">
               <span class="author">By Wilson Hutton</span>
@@ -127,7 +127,7 @@
               </p>
             </div>
           </div>
-          <div class="art3">
+          <div class="art">
             <img src="./images/image-plane.jpg" alt="" class="art-img" />
             <div class="art-content">
               <span class="author">By Wilson Hutton</span>
@@ -136,12 +136,12 @@
               </h3>
               <p class="art-subtext">
                 We want you to enjoy your travels. This is why we don’t charge
-                any fees on purchases while you’re abroad. We’ll even show you …
+                any fees on purchases while you’re abroad. We’ll even …
               </p>
             </div>
           </div>
-          <div class="art4">
-            <img src="" alt="" class="art-img" />
+          <div class="art">
+            <img src="./images/image-confetti.jpg" alt="" class="art-img" />
             <div class="art-content">
               <span class="author">By Claire Robinson</span>
               <h3 class="art-text">
@@ -149,8 +149,7 @@
               </h3>
               <p class="art-subtext">
                 After a lot of hard work by the whole team, we’re excited to
-                launch our closed beta. It’s easy to request an invite through
-                the site ...
+                launch our closed beta. It’s easy to request an invite through ...
               </p>
             </div>
           </div>
@@ -163,7 +162,7 @@
 
 
 
-    <footer class="footer-card">
+    <footer class="footer-card container">
       <img src="./images/logo-light.svg" alt="" class="footer-logo" tabindex="0">
       <div class="socials">
         <img src="./images/icon-facebook.svg" alt="" class="social" tabindex="0">
