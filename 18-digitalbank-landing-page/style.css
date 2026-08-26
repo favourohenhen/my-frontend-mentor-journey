@@ -259,7 +259,6 @@ a {
   .about-subtext,
   .sub-text {
     padding-inline: 2em;
-    font-size: 1em;
   }
   .article-cards {
     align-items: center;
@@ -279,7 +278,7 @@ a {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1399px) {
+@media (min-width: 1024px) {
   .site-main {
     width: 100%;
   }
@@ -312,14 +311,14 @@ a {
   .hero-bg {
     background-image: url(./images/bg-intro-desktop.svg);
     left: 0;
-    background-position: 30rem -10rem;
+    background-position: 25rem -8rem;
     height: 100%;
     background-size: cover;
   }
   .hero {
     flex-direction: row;
     gap: 2rem;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
   }
   .hero-content {
@@ -331,21 +330,82 @@ a {
   .hero-image {
     order: 2;
     flex: 1 1 50%;
-    width: 50%;
+    width: 30%;
     min-width: 0;
     overflow: hidden;
   }
 
   .hero-img {
     display: block;
-    width: calc(100% + 1rem);
+    width: calc(100% + 2rem);
     max-width: none;
-    margin-left: 1rem;
-    top: 20px;
+    top: 30px;
   }
   .reasons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    place-content: left;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: left;
+    padding: 0;
+  }
+  .article-cards {
+    display: grid;
+    /* Creates 4 equal-width columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    /* Ensures all rows are the same height as the tallest item in that row */
+    grid-auto-rows: 1fr;
+  }
+
+  .art {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .art-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .art-content {
+    flex: 1;
+    padding: 1em;
+  }
+  .art-text {
+    width: unset;
+    font-size: 0.8em;
+  }
+  .art-subtext {
+    font-size: 0.7em;
+  }
+  .footer-card{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .left-card{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  .right-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: end;
+  }
+  .foot{
+    width: 60%;
+  }
+  .footer-lists{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 1em;
+  }
+  .footer-lists li{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-nav{
+    
+    width: 40%;
   }
 }

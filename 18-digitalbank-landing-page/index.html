@@ -26,19 +26,23 @@
       </button>
       <nav class="nav-list" role="navigation">
         <ul class="list-items">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#articles">Blog</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="#" class="hero-list">Home</a></li>
+          <li><a href="#about" class="hero-list">About</a></li>
+          <li><a href="#" class="hero-list">Contact</a></li>
+          <li><a href="#articles" class="hero-list">Blog</a></li>
+          <li><a href="#" class="hero-list">Careers</a></li>
         </ul>
+        
       </nav>
       <button type="button" class="header-btn">Request Invite</button>
     </header>
-    <main class="site-main ">
-      <section class="hero container">
-        <div class="hero-bg"></div>
+    <main class="site-main">
+      <section class="hero ">
+        <div class="hero-image">
+           <div class="hero-bg"></div>
         <img src="./images/image-mockups.png" alt="" class="hero-img" />
+        </div>
+       
         <div class="hero-content container">
           <h1 class="hero-text">Next generation digital banking</h1>
           <p class="hero-subtext">
@@ -163,7 +167,8 @@
 
 
     <footer class="footer-card container">
-      <img src="./images/logo-light.svg" alt="" class="footer-logo" tabindex="0">
+      <div class="div left-card">
+        <img src="./images/logo-light.svg" alt="" class="footer-logo" tabindex="0">
       <div class="socials">
         <img src="./images/icon-facebook.svg" alt="" class="social" tabindex="0">
         <img src="./images/icon-youtube.svg" alt="" class="social" tabindex="0">
@@ -171,7 +176,9 @@
         <img src="./images/icon-pinterest.svg" alt="" class="social" tabindex="0">
         <img src="./images/icon-youtube.svg" alt="" class="social" tabindex="0">
       </div>
-      <ul class="footer-lists">
+      </div>
+      <div class="footer-nav">
+         <ul class="footer-lists">
         <li><a href="#about">About Us</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#articles">Blog</a></li>
@@ -179,8 +186,13 @@
         <li><a href="#">Support</a></li>
         <li><a href="#">Privacy Policy</a></li>
       </ul>
-      <button type="button"  class="hero-btn">Request Invite</button>
+      </div>
+     
+      <div class="right-card">
+        <button type="button"  class="hero-btn foot">Request Invite</button>
       <p class="footer-note"> © Digitalbank. All Rights Reserved</p>
+      </div>
+      
     </footer>
           
   </body>
