@@ -305,18 +305,25 @@ a {
   }
   .article-cards {
     display: grid;
-
     gap: 1rem;
-    /* Ensures all rows are the same height as the tallest item in that row */
-    grid-auto-rows: 1fr;
-
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  .art {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   .author {
     font-size: 0.7em;
   }
   .art-img {
-    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .art-content {
+    flex: 1;
   }
   .container {
     padding-inline: 2.5em;
@@ -519,7 +526,6 @@ a {
     gap: 0em;
   }
   .hero-bg {
-  
     left: 0;
     right: 0;
     background-position: right top;
