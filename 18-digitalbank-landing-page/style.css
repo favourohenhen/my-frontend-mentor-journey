@@ -17,9 +17,11 @@
   --Gray-100: hsl(220, 16%, 96%);
   --Gray-50: hsl(0, 0%, 98%);
   --White: hsl(0, 100%, 100%);
-  --button-bg: linear-gradient(to left top,
-      hsl(136, 65%, 51%),
-      hsl(192, 70%, 51%));
+  --button-bg: linear-gradient(
+    to left top,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
 }
 
 button {
@@ -306,7 +308,6 @@ a {
 @media (min-width: 768px) {
   .site-body {
     position: static;
-
   }
 
   .site-main {
@@ -359,9 +360,7 @@ a {
   .hero-image {
     order: 2;
     width: 60%;
-
   }
-
 
   .hero-btn {
     width: fit-content;
@@ -375,7 +374,6 @@ a {
     height: 100%;
     background-size: 74vw;
   }
-
 
   .reasons {
     display: grid;
@@ -552,7 +550,9 @@ a {
   .text {
     width: 100%;
   }
-
+  .about-subtext {
+    width: 60%;
+  }
   .article-cards {
     display: grid;
     /* Creates 4 equal-width columns */
@@ -635,14 +635,16 @@ a {
   .site-main {
     gap: 0em;
   }
-
+  .about-subtext {
+    width: 50%;
+  }
   .hero {
     min-height: 650px;
     position: relative;
   }
 
   .hero-image {
-   order: 2;
+    order: 2;
     width: 50%;
   }
 
