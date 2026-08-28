@@ -132,9 +132,13 @@ a {
   padding: 0;
 }
 
-a:hover,
-a:focus-visible {
+.hero-list:hover,
+.hero-list:focus-visible {
   border-bottom: var(--Green-500) solid;
+}
+.footer-list:hover,
+.footer-list:focus-visible {
+  color: var(--Green-500);
 }
 
 .hero-btn {
