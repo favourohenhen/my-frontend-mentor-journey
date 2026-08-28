@@ -636,16 +636,26 @@ a {
     gap: 0em;
   }
 
-  .hero-bg {
-    background-image: url(./images/bg-intro-desktop.svg);
-    left: 0;
-    background-position: 35rem -7rem;
-    height: 100%;
-    background-size: cover;
+  .hero {
+    min-height: 650px;
+    position: relative;
   }
 
   .hero-image {
-    width: 60%;
-    /* overflow: hidden; */
+   order: 2;
+    width: 50%;
+  }
+
+  .hero-img {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 45%;
+    order: 1;
   }
 }
