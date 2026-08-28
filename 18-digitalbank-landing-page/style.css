@@ -132,8 +132,8 @@ a {
   padding: 0;
 }
 
-.hero-list:hover,
-.hero-list:focus-visible {
+a:hover,
+a:focus-visible {
   border-bottom: var(--Green-500) solid;
 }
 
