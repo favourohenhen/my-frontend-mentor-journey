@@ -141,6 +141,7 @@ a {
   color: var(--Green-500);
 }
 
+
 .hero-btn {
   background: var(--button-bg);
   color: var(--White);
@@ -486,7 +487,7 @@ a {
     background: var(--button-bg);
     color: var(--White);
     padding: 0.5em;
-    width: 20%;
+    width: 15%;
     border: none;
     border-radius: 40px;
   }
