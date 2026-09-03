@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", sans-serif;
+  --font-fran: "Fraunces", sans-serif;
+
+  /* ## Colors */
+  /* ### Neutral */
+  --Neutral-900: hsl(33, 15%, 15%);
+  --Neutral-800: hsl(33, 22%, 20%);
+  --Neutral-700: hsl(32, 20%, 29%);
+  --Neutral-600: hsl(33, 17%, 41%);
+  --Neutral-400: hsl(36, 22%, 86%);
+  --Neutral-200: hsl(30, 24%, 93%);
+  --Neutral-100: hsl(35, 60%, 96%);
+  --Neutral-50: hsl(40, 60%, 98%);
+  --Neutral-0: hsl(0, 0%, 100%);
+  /* ### Sun */
+  --Sun-500: hsl(42, 83%, 58%);
+  --Sun-300: hsl(44, 84%, 75%);
+  --Sun-200: hsl(45, 100%, 74%);
+  --Sun-50: hsl(41, 100%, 93%);
+  /* ### Terracotta */
+  --Terracotta-700: hsl(15, 69%, 37%);
+  --Terracotta-600: hsl(15, 74%, 41%);
+  --Terracotta-500: hsl(18, 62%, 47%);
+  --Terracotta-400: hsl(22, 72%, 56%);
+  /* ### Blue */
+  --Blue-500: hsl(230, 49%, 56%);
+  /* ### Rose */
+  --Rose-500: hsl(340, 48%, 52%);
+  /* Border-bottom */
+  --border-bottom: hsl(0, 1%, 86%);
+}
+.site-body {
+  min-height: 100dvh;
+  width: 100%;
+
+  background-color: var(--Neutral-100);
+}
+.dashboard-container {
+  display: grid;
+  place-content: center;
+  gap: 1em;
+  padding: 1em;
+  /* max-width: 360px; */
+}
+.site-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  width: 100%;
+}
+.top-sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 0.5em; */
+  padding-bottom: 0.7em;
+  width: 100%;
+  border-bottom: 1px hsl(0, 1%, 86%) solid;
+}
+.logo-icon {
+  width: 80px;
+}
+.sidebar-text {
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.light-orange {
+  display: block;
+  font-size: 0.889em;
+  color: var(--Terracotta-700);
+  font-weight: bold;
+}
+.sidebar-list,
+.footer-sidebar {
+  display: none;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+.nav-toggle {
+  background-color: var(--Neutral-0);
+  border: 0.9px var(--Neutral-900) solid;
+}
+
+/* MAIN CONTENT STYLING BEGINS */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.booking-tag {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.7em;
+  color: var(--Neutral-600);
+}
+.welcome-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.welcome-text {
+  font-family: var(--font-fran);
+  font-weight: 400;
+  /* font-size: 1.9rem; */
+}
+.dark-orange {
+  color: var(--Terracotta-700);
+  font-weight: 500;
+}
+.button {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.btn {
+  padding: 0.5em 1.9em;
+  border-radius: 25px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  background-color: var(--Neutral-100);
+  border: none;
+}
+.btn-black {
+  background-color: black;
+  color: var(--Neutral-100);
+  font-size: 0.75em;
+}
+.btn-primary {
+  border: 1px var(--border-bottom) solid;
+  padding-inline: 2.5em;
+  font-size: 0.75em;
+}
+
+/* BOOKING CARDS */
+.booking-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.host-card {
+  order: 1;
+  background-color: var(--Terracotta-600);
+  color: var(--Neutral-0);
+  padding: 1.5em;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  transform: rotate(2deg);
+}
+.host-welcome-card {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+  border-top: 3px rgba(244, 226, 226, 0.153) dotted;
+  padding-top: 0.4em;
+}
+.host-welcome-tag {
+  text-transform: uppercase;
+  font-size: 0.52em;
+  font-family: var(--font-mono);
+  letter-spacing: 1.2px;
+}
+.host-note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+.host-tag {
+  font-family: var(--font-fran);
+  font-size: 1.1em;
+  color: var(--Sun-300);
+}
+.host-name {
+  font-family: var(--font-fran);
+  font-style: italic;
+  font-size: 2.2em;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+}
+.right-sun {
+  width: 80%;
+}
+.note {
+  font-size: 0.75em;
+  line-height: 1.2;
+  font-family: var(--font-sans);
+  margin-bottom: 3em;
+  color: var(--Neutral-400);
+}
+.room-tag {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.6em;
+  font-weight: 500;
+  color: var(--Neutral-400);
+}
+.room-label {
+  font-size: 1.2em;
+  color: var(--Sun-50);
+  font-family: var(--font-fran);
+  padding-top: 0.3em;
+}
+.receipt-card {
+  order: 2;
+  background-color: var(--Neutral-0);
+  padding: 1.4em;
+  border-radius: 20px;
+  transform: rotate(-2deg);
+}
+.receipt-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px var(--border-bottom) solid;
+}
+.receipt-head {
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.69em;
+  color: var(--Neutral-700);
+}
+.receipt-tag {
+  text-transform: uppercase;
+  font-size: 0.69em;
+  letter-spacing: 1px;
+  font-family: var(--font-sans);
+}
+.receipt-no {
+  font-size: 0.59em;
+  font-family: var(--font-mono);
+}
+.break {
+  display: block;
+  padding-top: 0.2em;
+  text-align: right;
+}
+.receipt-text {
+  padding-bottom: 0.5em;
+  font-family: var(--font-fran);
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.checked-booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 0.9em 0;
+  border-bottom: 1px var(--border-bottom) solid;
+}
+.check-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.check-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.6em;
+  color: var(--Neutral-600);
+  font-weight: 500;
+}
+.date {
+  font-family: var(--font-fran);
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.datetime {
+  font-size: 0.7em;
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+.receipt-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: 0.7em 0;
+  border-bottom: 1px rgba(0, 0, 0, 0.651) solid;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-tag {
+  font-family: var(--font-mono);
+  font-size: 0.79em;
+  font-weight: 500;
+}
+.price {
+  font-family: var(--font-mono);
+  font-size: 0.69em;
+  font-weight: 500;
+}
+.price-symbol {
+  padding-left: 0.02em;
+}
+.receipt-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.8em;
+}
+.total-text {
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  color: var(--Neutral-600);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  font-size: 0.65em;
+}
+.amount {
+  font-family: var(--font-fran);
+  font-size: 1.59em;
+}
+.receipt-barcode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment-meth {
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 0.65em;
+  color: var(--Neutral-600);
+}
+.hover-hint {
+  display: none;
+  /* Make visible in desktop */
+}
+
+/* ROW CARDS */
+.guest-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  padding-bottom: 1em;
+}
+.guest-row {
+  background-color: var(--Neutral-0);
+  border-radius: 20px;
+  border: 2px var(--border-bottom) solid;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  
+}
+.guest-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.guest-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.red,
+.blue,
+.pink {
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 0.789em;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.red,
+.right-red {
+  color: var(--Terracotta-700);
+}
+.blue,
+.right-blue {
+  color: var(--Blue-500);
+}
+.pink,
+.right-pink{
+  color: var(--Rose-500);
+}
+.bg-red {
+  background-color: var(--Terracotta-700);
+}
+.bg-blue {
+  background-color: var(--Blue-500);
+}
+.bg-pink {
+  background-color: var(--Rose-500);
+}
+.bg-red,
+.bg-blue,
+.bg-pink {
+  padding: 0.49em;
+  border-radius: 20%;
+  width: 35px;
+}
+.right-red,
+.right-blue,
+.right-pink{
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: var(--font-fran);
+}
+.guest-text {
+  font-family: var(--font-fran);
+  font-weight: 500;
+  font-size: 1.39em;
+  color: var(--Neutral-900);
+}
+.guest-tag {
+  font-size: 0.7em;
+  font-family: var(--font-sans);
+  color: var(--Neutral-600);
+  font-weight: 500;
+}
+.guestsubtext,
+.wifi-field {
+  font-family: var(--font-sans);
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--Neutral-600);
+}
+.wifi-field{
+  display: flex;
+  flex-direction: column;
+   gap: 0.29em;
+}
+.field{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ padding: 0.5em 0.6em;
+ border-radius: 10px;
+  background-color:rgba(183, 183, 183, 0.19);
+}
+.field-label{
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.79em;
+  font-weight: 500;
+}
+.field-value{
+  font-family: var(--font-sans);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.copy-btn{
+  text-transform: uppercase;
+  border: 1px var(--border-bottom) solid;
+  border-radius: 12px;
+  padding: 0.2em 0.5em;
+  font-size: 0.589rem;
+  font-weight: 500;
+  color: var(--Neutral-600);
+}
