@@ -541,35 +541,13 @@ ul li:focus-visible {
   .booking-cards {
     grid-template-columns: repeat(2, minmax(0, 350px));
     width: 100%;
+    gap: 1em;
     padding: 3rem 0;
   }
-  .booking-cards:hover .receipt-card,
-  .booking-cards:focus-within .receipt-card {
-    transform: translateX(-1.5rem) rotate(-9deg);
-    box-shadow: 0 24px 36px rgba(73, 43, 25, 0.2);
-  }
-  .booking-cards:hover .host-card,
-  .booking-cards:focus-within .host-card {
-    transform: translateX(1.5rem) rotate(9deg);
-    box-shadow: 0 24px 36px rgba(73, 43, 25, 0.22);
-  }
-  .sun-bg {
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    width: 220px;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-  .sun-background {
-    display: block;
-    width: 100%;
-  }
+
   .receipt-card {
     order: 1;
-    transform: rotate(-5deg);
+    transform: rotate(-4deg);
     display: grid;
     z-index: 1;
   }
@@ -589,8 +567,9 @@ ul li:focus-visible {
   .host-card {
     order: 2;
     display: grid;
-    transform: rotate(5deg);
+    transform: rotate(4deg);
     z-index: 1;
+    margin-left: -1.5rem;
 
     gap: 2em;
   }
@@ -621,7 +600,7 @@ ul li:focus-visible {
     grid-template-columns: 250px 1fr;
   }
   .sun-bg {
-    display: block;
+    display: none;
   }
   /* SIDEBAR */
   .top-sidebar {
@@ -766,5 +745,35 @@ ul li:focus-visible {
   }
   .hover-hint img {
     width: 1.1em;
+  }
+}
+@media (min-width: 1400px) {
+  .booking-cards:hover .receipt-card,
+  .booking-cards:focus-within .receipt-card {
+    transform: translateX(-7rem) rotate(-4deg);
+    box-shadow: 0 24px 36px rgba(73, 43, 25, 0.2);
+  }
+  .booking-cards:hover .host-card,
+  .booking-cards:focus-within .host-card {
+    transform: translateX(7rem) rotate(4deg);
+    box-shadow: 0 24px 36px rgba(73, 43, 25, 0.22);
+  }
+  .booking-cards:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .sun-bg {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .sun-background {
+    display: block;
+    width: 100%;
   }
 }
