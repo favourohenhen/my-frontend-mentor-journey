@@ -157,8 +157,10 @@ img {
 /* BOOKING CARDS */
 .booking-cards {
   display: grid;
-  grid-template-columns: repeat(1fr);
+  grid-template-columns: repeat(1, minmax(0, 500px));
   gap: 1em;
+  justify-content: center;
+  position: relative;
 }
 .host-card {
   order: 1;
@@ -171,6 +173,10 @@ img {
   gap: 1em;
 
   transform: rotate(2deg);
+  box-shadow: 0 18px 30px rgba(73, 43, 25, 0.16);
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
   background: linear-gradient(
     to top right,
     var(--Terracotta-600) 70%,
@@ -239,6 +245,10 @@ img {
   padding: 1.4em;
   border-radius: 20px;
   transform: rotate(-2deg);
+  box-shadow: 0 18px 30px rgba(73, 43, 25, 0.13);
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
 }
 .receipt-header {
   display: flex;
@@ -364,7 +374,6 @@ img {
 }
 .hover-hint {
   display: none;
-  /* Make visible in desktop */
 }
 
 /* ROW CARDS */
@@ -457,7 +466,7 @@ img {
 .guestsubtext,
 .wifi-field {
   font-family: var(--font-sans);
-  font-size: 0.85em;
+  font-size: 0.89em;
   font-weight: 500;
   color: var(--Neutral-600);
   margin-top: 0.5em;
@@ -497,7 +506,113 @@ img {
   color: var(--Neutral-600);
 }
 
-@media (min-width: 1400px) {
+/* FOCUS STATES */
+ul li:hover {
+  background-color: var(--Neutral-0);
+  padding: 0.49em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+ul li:focus-visible {
+  background-color: var(--Neutral-0);
+  padding: 0.49em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  outline: 2px var(--Terracotta-700) solid;
+}
+.btn:focus-visible {
+  outline: 3px var(--Terracotta-700) solid;
+  border: 1px white solid;
+}
+.copy-btn:focus-visible {
+  outline: 1px var(--Terracotta-700) solid;
+}
+.sun-bg {
+  display: none;
+}
+@media (min-width: 768px) {
+  .welcome-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .booking-cards {
+    grid-template-columns: repeat(2, minmax(0, 350px));
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .booking-cards:hover .receipt-card,
+  .booking-cards:focus-within .receipt-card {
+    transform: translateX(-1.5rem) rotate(-9deg);
+    box-shadow: 0 24px 36px rgba(73, 43, 25, 0.2);
+  }
+  .booking-cards:hover .host-card,
+  .booking-cards:focus-within .host-card {
+    transform: translateX(1.5rem) rotate(9deg);
+    box-shadow: 0 24px 36px rgba(73, 43, 25, 0.22);
+  }
+  .sun-bg {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .sun-background {
+    display: block;
+    width: 100%;
+  }
+  .receipt-card {
+    order: 1;
+    transform: rotate(-5deg);
+    display: grid;
+    z-index: 1;
+  }
+  .note {
+    font-size: 0.83em;
+  }
+  .checked-booking {
+    justify-content: space-evenly;
+  }
+  .date {
+    font-size: 2rem;
+  }
+  .receipt-item {
+    gap: 1em;
+    padding-bottom: 0.9em;
+  }
+  .host-card {
+    order: 2;
+    display: grid;
+    transform: rotate(5deg);
+    z-index: 1;
+
+    gap: 2em;
+  }
+  .guest-row {
+    gap: 1.5em;
+    padding: 1.2em;
+  }
+
+  .guest-text {
+    font-size: 1.5rem;
+  }
+  .left {
+    display: flex;
+    justify-content: space-between;
+  }
+  .guest-info {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
   .dashboard-container {
     display: grid;
     place-content: stretch;
@@ -505,6 +620,10 @@ img {
     grid-template-areas: "aside main";
     grid-template-columns: 250px 1fr;
   }
+  .sun-bg {
+    display: block;
+  }
+  /* SIDEBAR */
   .top-sidebar {
     flex-direction: column;
     border-bottom: 0;
@@ -515,9 +634,6 @@ img {
     width: 87%;
     padding-bottom: 0.5em;
   }
-  .hero-content {
-    padding-top: 1.3em;
-  }
   .sidebar {
     grid-area: aside;
     display: flex;
@@ -526,7 +642,7 @@ img {
     align-items: flex-start;
     padding: 1em 0.9em;
     border-right: 2px var(--border-bottom) solid;
-    height: 100dvh;
+    height: 100%;
   }
   .highlight-card {
     display: flex;
@@ -619,71 +735,36 @@ img {
     font-family: var(--font-sans);
     font-size: 0.9em;
   }
-  .guest-row {
-    gap: 1.59em;
-    padding: 1.29rem;
-  }
-  .guest-body {
-    gap: 0.9em;
-  }
-  .guest-text {
-    font-size: 1.5rem;
-  }
-  .left {
-    display: flex;
-    justify-content: space-between;
-  }
+
   .header {
     border-bottom: 1px hsl(0, 1%, 86%) solid;
   }
+  .hero-content {
+    padding-top: 1.3em;
+  }
   .site-main {
     grid-area: main;
-    gap: 2em;
-    padding: 0em 1.5em;
+    gap: 0em;
+    padding: 0em 1em;
   }
   .sidebar-list {
     display: block;
   }
-  .welcome-card {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .guest-info {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.8em;
-    padding: 1.5em 0;
-  }
 
-  .booking-cards {
-    place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 350px));
-    height: 200%;
-    gap: 0em;
+  .hover-hint {
+    text-transform: uppercase;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin: -1.5rem 0 1.5rem;
+    color: var(--Neutral-600);
+    font-family: var(--font-mono);
+    font-size: 0.62em;
+    letter-spacing: 0.12em;
   }
-  .receipt-card {
-    order: 1;
-    transform: rotate(-4deg);
-    aspect-ratio: 1/1;
-  }
-  .host-card {
-    order: 2;
-    display: grid;
-    transform: rotate(6deg);
-    aspect-ratio: 1/1;
-    gap: 2em;
-  }
-  .note {
-    font-size: 0.83em;
-  }
-  .checked-booking {
-    justify-content: space-evenly;
-  }
-  .date {
-    font-size: 2rem;
-  }
-  .receipt-item {
-    gap: 1em;
-    padding-bottom: 0.9em;
+  .hover-hint img {
+    width: 1.1em;
   }
 }

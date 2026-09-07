@@ -30,12 +30,10 @@
             class="nav-toggle"
             aria-label="Open Navigation"
             aria-expanded="false"
-          >
-            ☰
-          </button>
+          >☰</button>
           <!-- Guest navigation -->
-          <ul class="list-items">
-            <li class="highlight-item">
+          <ul class="list-items" tabindex="0">
+            <li class="highlight-item" tabindex="0">
               <div class="highlight-card">
                 <img src="./assets/images/icon-bed.svg" alt="bed-icon" /><a
                   href="#"
@@ -45,27 +43,27 @@
               <p class="notification">1</p>
             </li>
 
-            <li>
+            <li tabindex="0">
             
               <img src="./assets/images/icon-house.svg" alt="house-icon" /><a
                 href="#"
                 >The house</a
               >
             </li>
-            <li>
+            <li tabindex="0">
               <img src="./assets/images/icon-pin.svg" alt="pin-icon" /><a
                 href="#"
                 >Around town</a
               >
             </li>
-            <li>
+            <li tabindex="0">
               <img
                 src="./assets/images/icon-breakfast-outline.svg"
                 alt="breakfast-icon"
               /><a href="#">Breakfast</a>
             </li>
-            <li>
-              <img src="./assets/images/icon-mail.svg" alt="mail-icon" /><a
+            <li tabindex="0">
+              <img src="./assets/images/icon-mail.svg" alt="mail-icon" tabindex="0"/><a
                 href="#"
                 >Messages</a
               >
@@ -98,10 +96,10 @@
               Bienvenue, <span class="dark-orange"><em>Lucia.</em></span>
             </h1>
             <div class="button">
-              <button type="button" class="btn btn-primary">
+              <button type="button" tabindex="0" class="btn btn-primary">
                 Print receipt
               </button>
-              <button type="button" class="btn btn-black">
+              <button type="button" tabindex="0" class="btn btn-black">
                 Add to calendar
               </button>
             </div>
@@ -109,6 +107,7 @@
         </header>
         <!-- Booking cards start -->
         <section class="booking-cards">
+         
           <!-- Receipt card -->
           <div class="card receipt-card">
             <div class="receipt-header">
@@ -162,6 +161,9 @@
                 />
               </div>
             </div>
+          </div>
+           <div class="sun-bg">
+            <img src="./assets/images/illustration-sun.svg" class="sun-background" alt="">
           </div>
           <div class="card host-card">
             <div class="host-welcome-card">
@@ -244,7 +246,7 @@
                   <p class="field-label">Password</p>
                   <div class="field-left">
                     <p class="field-value">
-                      soleil-2026 <span class="copy-btn">Copy</span>
+                      soleil-2026 <span class="copy-btn" tabindex="0">Copy</span>
                     </p>
                   </div>
                 </div>
