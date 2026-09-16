@@ -28,7 +28,7 @@ Users should be able to:
 
 ![](./assets/images/activedesktop.png)
 ![](./assets/images/mobile.png)
-![](./assets/images/desktop2.png.png)
+![](./assets/images/desktop2.png)
 
 ### Links
 
