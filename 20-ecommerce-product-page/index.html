@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="site-body">
+    <header class="site-navigation">
+      <!-- LEFT-NAVIGATION  -->
+      <nav class="nav-lists">
+        <p class="logo">Sneakers</p>
+        <ul class="list-items">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- RICHT-NAVIGATION  -->
+      <section class="avatar-cart">
+        <img src="./images/icon-cart.svg" alt="cart-icon" />
+        <img src="./images/image-avatar.png" alt="" class="avatar" />
+      </section>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="site-main">
+  
+      <!-- LEFT CONTENT -->
+      <section class="sneaker-collections">
+        <img src="./images/" alt="" class="main-img" />
+
+        <section class="sneaker-products">
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </section>
+      </section>
+      <!-- RIGHT CONTENT -->
+
+      <section class="sneaker-content">
+        <section class="sneaker-information">
+          <p class="eye-opener">Sneaker Company</p>
+          <h1 class="sneaker-info">Fall Limited Edition Sneakers</h1>
+          <p class="sneaker-details">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <section class="sneaker-prices">
+            <p class="discounted-price">$125.00</p>
+            <p class="discount">50%</p>
+
+            <section class="sneaker-originprice">
+              <p class="original-price">$250.00</p>
+            </section>
+          </section>
+        </section>
+
+        <section class="sneaker-cart">
+          <div class="counter">
+            <button
+              type="button"
+              id="decrease-btn"
+              onclick="decrease()"
+              aria="decrease">-</button>
+            <p class="counter-num">0</p>
+            <button
+              type="button"
+              id="increment-btn"
+              onclick="increment()"
+              aria="increasment-button">+</button>
+          </div>
+
+          <div class="addcart-button">
+            <button type="submit">Add to cart</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
