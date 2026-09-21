@@ -19,7 +19,18 @@
     <header class="site-navigation">
       <!-- LEFT-NAVIGATION  -->
       <nav class="nav-lists">
-        <p class="logo">Sneakers</p>
+        <div class="logo-toggle">
+          <button
+            type="button"
+            class="nav-toggle"
+            aria-label="Open Navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <p class="logo">Sneakers</p>
+        </div>
+
         <ul class="list-items">
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
@@ -30,39 +41,75 @@
       </nav>
       <!-- RICHT-NAVIGATION  -->
       <section class="avatar-cart">
-        <img src="./images/icon-cart.svg" alt="cart-icon" />
+        <img src="./images/icon-cart.svg" alt="cart-icon" width="15px" />
         <img src="./images/image-avatar.png" alt="" class="avatar" />
       </section>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="site-main">
-  
       <!-- LEFT CONTENT -->
-      <section class="sneaker-collections">
-        <img src="./images/" alt="" class="main-img" />
+      <section class="product-gallery">
+        <div class="product-gallery__main">
+          <img
+            class="product-image"
+            src="./images/image-product-1.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <img
+            class="product-image"
+            src="./images/image-product-2.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <img
+            class="product-image"
+            src="./images/image-product-3.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <img
+            class="product-image"
+            src="./images/image-product-4.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+        </div>
 
-        <section class="sneaker-products">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-        </section>
+        <div class="product-gallery__thumbnails">
+          <button class="product-gallery__thumbnail">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+          </button>
+
+          <button class="product-gallery__thumbnail">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+          </button>
+
+          <button class="product-gallery__thumbnail">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+          </button>
+
+          <button class="product-gallery__thumbnail">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+          </button>
+        </div>
       </section>
       <!-- RIGHT CONTENT -->
 
       <section class="sneaker-content">
         <section class="sneaker-information">
-          <p class="eye-opener">Sneaker Company</p>
-          <h1 class="sneaker-info">Fall Limited Edition Sneakers</h1>
-          <p class="sneaker-details">
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they’ll withstand everything
-            the weather can offer.
-          </p>
+          <div class="sneaker-header">
+            <p class="eye-opener">Sneaker Company</p>
+            <h1 class="sneaker-info">Fall Limited Edition Sneakers</h1>
+            <p class="sneaker-details">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          </div>
           <section class="sneaker-prices">
-            <p class="discounted-price">$125.00</p>
+            <div class="disc">
+               <p class="discounted-price">$125.00</p>
             <p class="discount">50%</p>
+            </div>
+           
 
             <section class="sneaker-originprice">
               <p class="original-price">$250.00</p>
@@ -76,17 +123,27 @@
               type="button"
               id="decrease-btn"
               onclick="decrease()"
-              aria="decrease">-</button>
+              aria="decrease"
+              class="btn"
+            >
+              -
+            </button>
             <p class="counter-num">0</p>
             <button
               type="button"
               id="increment-btn"
               onclick="increment()"
-              aria="increasment-button">+</button>
+              aria="increasment-button"
+              class="btn"
+            >
+              +
+            </button>
           </div>
 
           <div class="addcart-button">
-            <button type="submit">Add to cart</button>
+            <img src="./images/icon-cart.svg" alt="cart-icon" class="cart" width="15px" />
+            
+            <button type="submit" class="btn-add">  Add to cart</button>
           </div>
         </section>
       </section>

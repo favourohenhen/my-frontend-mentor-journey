@@ -1,29 +1,281 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
 
 *,
 *::before,
-*::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-:root{
-/* ### Primary */
---Orange: hsl(26, 100%, 55%);
---Pale-orange: hsl(25, 100%, 94%);
+:root {
+  /* ### Primary */
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
 
-/* ### Neutral */
---Very-dark-blue: hsl(220, 13%, 13%);
---Dark-grayish-blue: hsl(219, 9%, 45%);
---Grayish-blue: hsl(220, 14%, 75%);
---Light-grayish-blue: hsl(223, 64%, 98%);
---White: hsl(0, 0%, 100%);
+  /* ### Neutral */
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
 
+  /* (with 75% opacity for lightbox background) */
+  --Black: hsl(0, 0%, 0%);
 
-/* (with 75% opacity for lightbox background) */
---Black: hsl(0, 0%, 0%);
+  /* font */
+  --font: "Kumbh Sans", sans-serif;
+}
 
-/* font */
---font: "Kumbh Sans", sans-serif;
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.site-body {
+  font-family: var(--font);
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+}
+.site-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9em;
+  gap: 5em;
+  width: 100%;
+  z-index: 1px;
+}
+.nav-lists {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+}
+.logo-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-align: center;
+}
+.nav-toggle {
+  color: var(--Black);
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1em;
+  padding-bottom: 0.1em;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.list-items {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  display: none;
+}
+a {
+  color: var(--Dark-grayish-blue);
+  text-decoration: none;
+  font-weight: 400;
+}
+.avatar-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  justify-content: end;
+}
+.avatar {
+  width: 20%;
+}
+
+.product-image {
+  flex: 0 0 100%;
+  overflow: hidden;
+  scroll-snap-align: start;
+  opacity: 1;
+
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  transform: translateY(-6%);
+  z-index: -1px;
+}
+.product-image:hover {
+  opacity: 1;
+}
+.product-gallery__main > img {
+  width: 100%;
+  /* height: 20%; */
+  object-position: center;
+  object-fit: cover;
+}
+.product-gallery__main {
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  scroll-behavior: smooth;
+  width: 100%;
+  anchor-name: --product-gallery__main;
+  max-width: 1000px;
+  max-height: 1000px;
+  scroll-snap-type: x proximity;
+  scroll-marker-group: after;
+}
+.product-gallery__main::-webkit-scrollbar {
+  display: none;
+}
+
+.product-gallery__main::scroll-button(right),
+.product-gallery__main::scroll-button(left) {
+  content: ">";
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #000;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1.195em;
+  font-weight: 700;
+  padding-bottom: 0.1em;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: fixed;
+  align-self: anchor-center;
+  translate: 20% 0;
+  position-area: right center;
+}
+.product-gallery__main::scroll-button(left) {
+  content: "<";
+  translate: -20% 0;
+  position-area: left center;
+}
+
+.product-gallery__main::scroll-button(right):disabled,
+.product-gallery__main::scroll-button(left):disabled {
+  opacity: 1;
+  cursor: auto;
+}
+
+.product-gallery__thumbnails {
+  display: none;
+}
+.sneaker-content {
+  padding-inline: 1.5em;
+}
+.sneaker-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  color: var(--Black);
+}
+.sneaker-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.eye-opener {
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+  font-weight: 700;
+  font-size: 0.8em;
+}
+.sneaker-info {
+  font-size: 1.6em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.sneaker-details {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.5;
+  font-size: 0.948em;
+  padding-bottom: 1em;
+}
+.sneaker-prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.disc {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.discounted-price {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.discount {
+  background-color: var(--Black);
+  color: var(--White);
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.original-price {
+  font-size: 0.8em;
+  text-decoration: line-through;
+}
+.sneaker-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2em;
+  gap: 1em;
+}
+
+.counter {
+  display: flex;
+  background-color: var(--Light-grayish-blue);
+  align-items: center;
+  justify-content: space-between;
+  gap: 5em;
+  padding: 0.9em;
+  border-radius: 10px;
+  width: 100%;
+}
+.btn {
+  border: none;
+  color: var(--Orange);
+  font-size: 1.39em;
+  background-color: transparent;
+   font-weight: 700;
+}
+.addcart-button  {
+  padding: 0.9em;
+  width: 100%;
+  background-color: var(--Orange);
+
+ 
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 1em;
+ font-weight: 700;
+}
+.btn-add {
+  color: var(--Black);
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.cart{
+  fill: var(--Black);
+width: 5%;
 }
