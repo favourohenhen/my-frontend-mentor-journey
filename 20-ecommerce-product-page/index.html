@@ -121,17 +121,17 @@
           <div class="counter">
             <button
               type="button"
-              id="decrease-btn"
+              
               onclick="decrease()"
               aria="decrease"
               class="btn"
             >
               -
             </button>
-            <p class="counter-num">0</p>
+            <p class="counter-num" id="count-el">0</p>
             <button
               type="button"
-              id="increment-btn"
+              
               onclick="increment()"
               aria="increasment-button"
               class="btn"
@@ -143,10 +143,11 @@
           <div class="addcart-button">
             <img src="./images/icon-cart.svg" alt="cart-icon" class="cart" width="15px" />
             
-            <button type="submit" class="btn-add">  Add to cart</button>
+            <button type="submit" class="btn-add" id="addbtn" onclick="add()">  Add to cart</button>
           </div>
         </section>
       </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
