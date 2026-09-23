@@ -93,8 +93,22 @@ a {
   gap: 0.9em;
   justify-content: end;
 }
+.cart-wrapper{
+  position: relative;
+}
+.cart-badge{
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  font-size: 0.62em;
+  background-color: var(--Orange);
+  color: var(--White);
+  border-radius: 20px;
+  padding: 0.2em 0.5em;
+}
 .cart-icon {
-  width: 20px;
+  filter: brightness(0);
+  width: 22px;
 }
 .avatar {
   width: 15%;

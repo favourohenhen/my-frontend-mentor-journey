@@ -41,7 +41,11 @@
       </nav>
       <!-- RICHT-NAVIGATION  -->
       <section class="avatar-cart">
-        <img src="./images/icon-cart.svg" class="cart-icon" width="15px" />
+        <div class="cart-wrapper">
+          <img src="./images/icon-cart.svg" class="cart-icon" width="15px" />
+          <span class="cart-badge" id="badge">0</span>
+        </div>
+        
         <img src="./images/image-avatar.png" alt="" class="avatar" />
       </section>
     </header>
@@ -53,6 +57,7 @@
         <div class="product-gallery__main">
           <img
             class="product-image"
+            id="main-img"
             src="./images/image-product-1.jpg"
             alt="Fall Limited Edition Sneakers"
           />
@@ -74,19 +79,19 @@
         </div>
 
         <div class="product-gallery__thumbnails">
-          <button class="product-gallery__thumbnail">
+          <button class="product-gallery__thumbnail" onclick="imgsrc(1)">
             <img src="./images/image-product-1-thumbnail.jpg" alt="" />
           </button>
 
-          <button class="product-gallery__thumbnail">
+          <button class="product-gallery__thumbnail" onclick="imgsrc(2)">
             <img src="./images/image-product-2-thumbnail.jpg" alt="" />
           </button>
 
-          <button class="product-gallery__thumbnail">
+          <button class="product-gallery__thumbnail" onclick="imgsrc(3)">
             <img src="./images/image-product-3-thumbnail.jpg" alt="" />
           </button>
 
-          <button class="product-gallery__thumbnail">
+          <button class="product-gallery__thumbnail" onclick="imgsrc(4)">
             <img src="./images/image-product-4-thumbnail.jpg" alt="" />
           </button>
         </div>
