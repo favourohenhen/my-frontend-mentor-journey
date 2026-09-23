@@ -28,12 +28,19 @@ function add() {
 }
 
 
-// const imagesrc1 = "./images/image-product-1.jpg"
-// const imagesrc2 = "./images/image-product-2.jpg"
-// const imagesrc3 = "./images/image-product-3.jpg"
-// const imagesrc4 = "./images/image-product-4.jpg"
+const imagesrc1 = "./images/image-product-1.jpg"
+const imagesrc2 = "./images/image-product-2.jpg"
+const imagesrc3 = "./images/image-product-3.jpg"
+const imagesrc4 = "./images/image-product-4.jpg"
 
-function imgsrc() {
-  console.log(count)
-   
+function imgsrc(number) {
+  if (number === 1) {
+    mainImg.src = imagesrc1;
+  } else if (number === 2) {
+    mainImg.src = imagesrc2;
+  } else if (number === 3) {
+    mainImg.src = imagesrc3;
+  } else if (number === 4) {
+    mainImg.src = imagesrc4;
+  }
 }
