@@ -56,43 +56,43 @@
       <section class="product-gallery">
         <div class="product-gallery__main">
           <img
-            class="product-image"
+            class="product-image1"
             id="main-img"
             src="./images/image-product-1.jpg"
             alt="Fall Limited Edition Sneakers"
           />
           <img
-            class="product-image"
+            class="product-image2"
             src="./images/image-product-2.jpg"
             alt="Fall Limited Edition Sneakers"
           />
           <img
-            class="product-image"
+            class="product-image3"
             src="./images/image-product-3.jpg"
             alt="Fall Limited Edition Sneakers"
           />
           <img
-            class="product-image"
+            class="product-image4"
             src="./images/image-product-4.jpg"
             alt="Fall Limited Edition Sneakers"
           />
         </div>
 
         <div class="product-gallery__thumbnails">
-          <button class="product-gallery__thumbnail" onclick="imgsrc(1)">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+          <button class="thumbnail" type="button" onclick="imgsrc()">
+            <img src="./images/image-product-1-thumbnail.jpg" class="thumbimg"  alt="" />
           </button>
 
-          <button class="product-gallery__thumbnail" onclick="imgsrc(2)">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+          <button class="thumbnail" type="button" onclick="imgsrc()">
+            <img src="./images/image-product-2-thumbnail.jpg" class="thumbimg"  alt="" />
           </button>
 
-          <button class="product-gallery__thumbnail" onclick="imgsrc(3)">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+          <button class="thumbnail" type="button" onclick="imgsrc()">
+            <img src="./images/image-product-3-thumbnail.jpg" class="thumbimg" alt="" />
           </button>
 
-          <button class="product-gallery__thumbnail" onclick="imgsrc(4)">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+          <button class="thumbnail" type="button" onclick="imgsrc()">
+            <img src="./images/image-product-4-thumbnail.jpg" class="thumbimg" alt="" />
           </button>
         </div>
       </section>
@@ -145,10 +145,10 @@
             </button>
           </div>
 
-          <div class="addcart-button">
+          <div class="addcart-button" onclick="add()">
             <img src="./images/icon-cart.svg" alt="cart-icon" class="cart" width="15px" />
             
-            <button type="submit" class="btn-add" id="addbtn" onclick="add()">  Add to cart</button>
+            <button type="submit" class="btn-add" id="addbtn" >  Add to cart</button>
           </div>
         </section>
       </section>
