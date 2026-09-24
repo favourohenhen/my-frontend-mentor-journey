@@ -14,7 +14,7 @@ The goal of this repo is simple: build real-world web pages and components from 
 - **CSS3**: CSS Grid, Flexbox, custom properties (variables), and mobile-first responsive design.
 - **JavaScript**: DOM manipulation, interactive components (galleries, menus, counters), and event handling.
 
----
+----
 
 ## 📂 Projects
 
