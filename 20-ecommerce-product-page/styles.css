@@ -398,8 +398,16 @@ a {
     object-fit: cover;
     overflow: hidden;
   }
-  .cart-wrapper{
-    width: 8
+  .thumbnail.active {
+    opacity: 0.6;
+    border: 3px solid var(--Orange);
+    object-fit: cover;
+    overflow: hidden;
   }
-
+  .cart-badge{
+    font-size: 0.7rem;
+  }
+  .cart-icon{
+    width: 25px;
+  }
 }
