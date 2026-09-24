@@ -8,23 +8,23 @@ console.log(mainImg)
 let count = 0
 
 function increment() {
-    count += 1
-    countEl.innerText = count
+  count += 1
+  countEl.innerText = count
 }
 
 function decrease() {
-    if (count >= 1) {
-        count -= 1
-    } else {
-        count = 0
-    }
-    countEl.innerText = count
+  if (count >= 1) {
+    count -= 1
+  } else {
+    count = 0
+  }
+  countEl.innerText = count
 
 }
 
 function add() {
-    countBadge.textContent = count
-    console.log(count)
+  countBadge.textContent = count
+  console.log(count)
 }
 
 
@@ -43,4 +43,21 @@ function imgsrc(number) {
   } else if (number === 4) {
     mainImg.src = imagesrc4;
   }
+}
+
+const navMenu = document.getElementById("nav-menu");
+
+let menuOpen = false;
+
+function toggleMenu() {
+  if (menuOpen === false) {
+    navMenu.style.left = "0";
+    menuOpen = true;
+  } else {
+    navMenu.style.left = "-60%";
+    menuOpen = false;
+  }
+}
+function closeBtn() {
+  navMenu.style.left = "-60%";
 }
