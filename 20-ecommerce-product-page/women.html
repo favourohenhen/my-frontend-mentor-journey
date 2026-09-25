@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Collection | E-commerce Website</title>
+    <link rel="stylesheet" href="./Stylesheets/styles.css">
+    <link rel="stylesheet" href="./Stylesheets/women.css">
+</head>
+<body class="site-body">
+      <header class="site-navigation">
+      <!-- LEFT-NAVIGATION  -->
+      <nav class="nav-lists">
+        <div class="logo-toggle">
+          <button
+            type="button"
+            class="nav-toggle"
+            aria-label="Open Navigation"
+            aria-expanded="false"
+            onclick="toggleMenu()"
+          >
+            ☰
+          </button>
+           <a href="./index.html" class="home-link">
+            <img src="./images/logo.svg" class="logo"><img>
+          </a>
+        </div>
+
+        <ul class="list-items" id="nav-menu">
+          <img src="./images/icon-close.svg" onclick="closeBtn()" class="closebtn" alt="">
+          <li><a href="./collection.html">Collections</a></li>
+          <li><a href="./men.html">Men</a></li>
+          <li><a href="./women.html" class="active-link" aria-current="page">Women</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- RICHT-NAVIGATION  -->
+      <section class="avatar-cart">
+        <div class="cart-wrapper">
+          <img src="./images/icon-cart.svg" class="cart-icon" />
+          <span class="cart-badge" id="badge">0</span>
+        </div>
+        
+        <img src="./images/image-avatar.png" alt="" class="avatar" />
+      </section>
+    </header>
+</body>
+</html>
