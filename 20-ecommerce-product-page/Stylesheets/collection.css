@@ -13,6 +13,7 @@
 
 .main-site{
   display: flex;
+  flex-direction: column;
   gap: 2em;
-  padding-inline: 1.5em;
+  padding-inline: 1em;
 }
