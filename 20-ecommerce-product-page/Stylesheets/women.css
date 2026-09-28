@@ -1,5 +1,4 @@
 .active-link {
   color: var(--Black);
-  /* font-weight: 700; */
   border-bottom: 3px solid hsl(26, 100%, 55%);
 }

@@ -25,6 +25,17 @@
 
   /* font */
   --font: "Kumbh Sans", sans-serif;
+  --hero-big: 1.6em;
+  --hero-small: 0.9486em;
+  --discount-price: 1.4em;
+  --smaller-text: 0.8em;
+  --btn: 1.39em;
+  --scroll-btn: 1.195em;
+  --badge-sm-screen: 0.62em;
+  --badge-big-screen: 0.7rem;
+  --hero-big-screen: 1rem;
+  --hero-small-screen: 2.5em;
+--nav-toggle: 1em;
 }
 
 img {
@@ -43,7 +54,7 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  width: min(100% - 2rem, 1100px);
+  width: min(100% - 2rem, 1490px);
   margin-inline: auto;
   padding: 1.5rem 0;
 }
@@ -65,7 +76,7 @@ img {
   background-color: white;
   border: none;
   font-weight: 700;
-  font-size: 1em;
+  font-size: var(--nav-toggle);
   padding-bottom: 0.1em;
 }
 .logo {
@@ -113,7 +124,7 @@ a {
   position: absolute;
   top: -3px;
   right: -5px;
-  font-size: 0.62em;
+  font-size: var(--badge-sm-screen);
   background-color: var(--Orange);
   color: var(--White);
   border-radius: 20px;
@@ -165,7 +176,7 @@ a {
   color: #000;
   background-color: white;
   cursor: pointer;
-  font-size: 1.195em;
+  font-size: var(--scroll-btn);
   font-weight: 700;
   padding-bottom: 0.1em;
   margin-left: 20px;
@@ -211,17 +222,17 @@ a {
   text-transform: uppercase;
   color: var(--Dark-grayish-blue);
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: var(--smaller-text);
 }
 .sneaker-info {
-  font-size: 1.6em;
+  font-size: var(--hero-big);
   line-height: 1.1;
   font-weight: 700;
 }
 .sneaker-details {
   color: var(--Dark-grayish-blue);
   line-height: 1.5;
-  font-size: 0.948em;
+  font-size: var(--hero-small);
   padding-bottom: 1em;
 }
 .sneaker-prices {
@@ -237,18 +248,18 @@ a {
 }
 .discounted-price {
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: var(--discount-price);
 }
-.discount {
+.discount-percent {
   background-color: var(--Black);
   color: var(--White);
   padding: 0.2em 0.5em;
   border-radius: 5px;
-  font-size: 0.8em;
+  font-size: var(--smaller-text);
   font-weight: 700;
 }
 .original-price {
-  font-size: 0.8em;
+  font-size: var(--smaller-text);
   text-decoration: line-through;
   color: var(--Dark-grayish-blue);
   font-weight: 700;
@@ -276,7 +287,7 @@ a {
 .btn {
   border: none;
   color: var(--Orange);
-  font-size: 1.39em;
+  font-size: var(--btn);
   background-color: transparent;
   font-weight: 700;
 }
@@ -383,10 +394,10 @@ a {
     flex-direction: row;
   }
   .sneaker-info {
-    font-size: 2.5em;
+    font-size: var(--hero-small-screen);
   }
   .sneaker-details {
-    font-size: 1rem;
+    font-size: var(--hero-big-screen);
   }
   .counter {
     flex: 1;
@@ -405,7 +416,7 @@ a {
     overflow: hidden;
   }
   .cart-badge {
-    font-size: 0.7rem;
+    font-size: var(--badge-big-screen);
   }
   .cart-icon {
     width: 25px;
